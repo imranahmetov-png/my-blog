@@ -1,10 +1,10 @@
 export default function UIHeader() {
   return (
-    <header className=" flex justify-between align-center items-center px-8 py-4 min-w-screen min-h-[43px]">
+    <header className="flex justify-between text-align:center items-center px-8 py-4 min-w-screen min-h-[43px]">
       <div className="relative text-transparent bg-clip-text bg-gradient-to-r from-[#FD6F00] to-[#E60026] text-[30px] text-align:left min-w-[81px] min-h-[39px] flex items-center pl-4 font-bold ">
         Imran
       </div>
-      <nav className="flex gap-6 min-w-[653px] min-h-[24px] text-align: center align-top">
+      <nav className="flex gap-6 min-w-[653px] min-h-[24px] text-align:center align-top">
         <a
           href="#Home"
           className="relative text-[#FD6F00] transition text-[20px] text-align:center flex items-center pl4- font-bold"
