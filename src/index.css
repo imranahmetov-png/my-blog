@@ -23,3 +23,38 @@ html {
   background-color: black;
   scroll-behavior: smooth;
 }
+
+/* typing animation*/
+@layer utilities {
+  /* Основной класс для анимации "пишущей машинки" */
+  .typewriter {
+    overflow: hidden; /* Скрывает текст, пока он "печатается" */
+    border-right: 0.15em solid orange; /* Имитирует мигающий курсор */
+    white-space: nowrap; /* Текст не переносится на новую строку */
+    margin: 0 auto; /* Центрирует текст (если нужно) */
+    letter-spacing: 0.15em; /* Расстояние между буквами */
+    animation: typing 3.5s steps(40, end),
+      /* Анимация появления текста */ blink-caret 0.75s step-end infinite; /* Мигающий курсор */
+  }
+
+  /* Эффект "печати" — постепенно увеличивает ширину текста */
+  @keyframes typing {
+    from {
+      width: 0; /* Начинаем с нулевой ширины */
+    }
+    to {
+      width: 100%; /* Конец — весь текст виден */
+    }
+  }
+
+  /* Эффект мигания курсора */
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent; /* Курсор исчезает */
+    }
+    50% {
+      border-color: orange; /* Курсор появляется (миг) */
+    }
+  }
+}
