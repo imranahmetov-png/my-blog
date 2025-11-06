@@ -37,7 +37,9 @@ export default function UIHeader() {
         </a>
       </nav>
       <a
-        href="#hire"
+        href="https://discord.gg/2h8kgfT5"
+        target="_blank"
+        rel="noopener noreferrer"
         className="bg-[#FD6F00] text-white px-5 py-2 rounded-lg font-semibold hover:bg-[#ff8800] transition"
       >
         Hire Me

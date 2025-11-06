@@ -11,7 +11,7 @@ function UiHero() {
             {/*frame 1*/}
             <div className="flex flex-col min-w-[408px] min-h-[181px] justify-start items-start gap-[24px]">
               <div className="flex flex-col min-w-[219px] min-h-[73px] justify-start items-start gap-[10px] flex-wrap">
-                <p className="text-[24px] text-[#707070]">Hi I am</p>
+                <p className="text-[24px] text-[#707070] typewriter">Hi I am</p>
                 <p className="text-[28px] text-[#707070] font-bold">
                   Akhmetov Imran
                 </p>
@@ -22,22 +22,43 @@ function UiHero() {
             </div>
             {/*frame 2*/}
             <div className="min-w-[95px] min-h-[40px] flex items-end gap-2">
-              <img
-                src={inst}
-                alt="Instagram"
-                className="min-w-[40px] min-h-[40px]"
-              />
-              <img
-                src={telegram}
-                alt="Telegram"
-                className="min-w-[40px] min-h-[40px]"
-              />
+              {/*Instagram*/}
+              <a
+                href="https://www.instagram.com/imra_n_96?igsh=Zmw0NjJxM3k4cHRo&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={inst}
+                  alt="Instagram"
+                  className="min-w-[40px] min-h-[40px] cursor-pointer hover:opacity-80 transition relative z-50"
+                />
+              </a>
+              {/*Telegram*/}
+              <a
+                href="https://t.me/Shifu_km"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={telegram}
+                  alt="Telegram"
+                  className="min-w-[40px] min-h-[40px] cursor-pointer hover:opacity-80 transition relative z-50"
+                />
+              </a>
             </div>
           </div>
           <div className="flex items-center gap-4 min-w-[389px] min-h-[48px]">
-            <div className="bg-gradient-to-r from-[#FD6F00] to-[#E46400] linear-gradient min-w-[156px] min-h-[48px] text-[20px] text-[#FFFFFF] text-center px-5 py-2 rounded-lg font-bold transition">
-              Hire me
-            </div>
+            <a
+              href="https://discord.gg/2h8kgfT5"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <a href="https://discord.gg/2h8kgfT5"></a>
+              <div className="bg-gradient-to-r from-[#FD6F00] to-[#E46400] linear-gradient min-w-[156px] min-h-[48px] text-[20px] text-[#FFFFFF] text-center px-5 py-2 rounded-lg font-bold  cursor-pointer hover:opacity-80 transition relative z-50">
+                Hire me
+              </div>
+            </a>
             <div className="min-w-[209px] min-h-[48px] border-2 border-[#959595] px-5 py-2 rounded-lg text-[20px] text-[#959595] text-center font-bold">
               Download CV
             </div>
