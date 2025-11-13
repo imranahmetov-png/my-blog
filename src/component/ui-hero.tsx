@@ -10,9 +10,11 @@ function UiHero() {
           <div className="flex flex-col min-w-[408px] min-h-[238px] justify-start items-start gap-[17px]">
             {/*frame 1*/}
             <div className="flex flex-col min-w-[408px] min-h-[181px] justify-start items-start gap-[24px]">
-              <div className="flex flex-col min-w-[219px] min-h-[73px] justify-start items-start gap-[10px] flex-wrap">
-                <p className="text-[24px] text-[#707070] typewriter">Hi I am</p>
-                <p className="text-[28px] text-[#707070] font-bold typewriter">
+              <div className="flex flex-col min-w-[219px] min-h-[73px] justify-start items-start text-left gap-[10px] flex-wrap">
+                <p className="text-[24px] text-left text-[#707070] typewriter-1">
+                  Hi I am
+                </p>
+                <p className="text-[28px] text-[#707070] font-bold typewriter-2">
                   Akhmetov Imran
                 </p>
               </div>
