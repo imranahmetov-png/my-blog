@@ -29,7 +29,6 @@ html {
   /* Основной класс для анимации "пишущей машинки" */
   .typewriter {
     overflow: hidden; /* Скрывает текст, пока он "печатается" */
-    border-right: 0.15em solid orange; /* Имитирует мигающий курсор */
     white-space: nowrap; /* Текст не переносится на новую строку */
     margin: 0 auto; /* Центрирует текст (если нужно) */
     letter-spacing: 0.15em; /* Расстояние между буквами */
@@ -55,6 +54,18 @@ html {
     }
     50% {
       border-color: orange; /* Курсор появляется (миг) */
+    }
+  }
+  /*  Добавляем анимацию исчезновения курсора после typing */
+  .typewriter::after {
+    content: '';
+    border-right: 0.15em solid orange;
+    animation: blink-caret 0.75s step-end infinite,
+      hide-caret 0s linear 3.5s forwards; /* 3.5s = длительность typing */
+  }
+  @keyframes hide-caret {
+    to {
+      border-right: none;
     }
   }
 }

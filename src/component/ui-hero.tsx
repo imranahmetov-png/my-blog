@@ -12,7 +12,7 @@ function UiHero() {
             <div className="flex flex-col min-w-[408px] min-h-[181px] justify-start items-start gap-[24px]">
               <div className="flex flex-col min-w-[219px] min-h-[73px] justify-start items-start gap-[10px] flex-wrap">
                 <p className="text-[24px] text-[#707070] typewriter">Hi I am</p>
-                <p className="text-[28px] text-[#707070] font-bold typewriter ">
+                <p className="text-[28px] text-[#707070] font-bold typewriter">
                   Akhmetov Imran
                 </p>
               </div>

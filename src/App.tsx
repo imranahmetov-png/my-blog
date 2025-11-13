@@ -1,5 +1,6 @@
 import UIHeader from './component/header'
 import UiHero from './component/ui-hero'
+import UiFrame from './component/service'
 function App() {
   return (
     <div className="bg-[#121212] min-w-screen min-h-screen pt-[57px] sm:min-w-screen overflow-x-hidden sm:min-h-screen">
@@ -10,6 +11,9 @@ function App() {
           <UiHero />
         </div>
         {/*Services Section */}
+        <div className="min-w-screen h-[854px] flex flex-col justify-start items-center gap-[100px] p-4">
+          <UiFrame />
+        </div>
       </div>
     </div>
   )
