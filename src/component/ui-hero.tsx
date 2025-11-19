@@ -2,6 +2,7 @@ import avatar from '@/assets/img/image 2.svg'
 import inst from '@/assets/img/inst.svg'
 import klyaksa from '@/assets/img/klyaksa.svg'
 import telegram from '@/assets/img/telegram.svg'
+import github from '@/assets/img/github.svg'
 function UiHero() {
   return (
     <div className="flex justify-between items-center px-8 py-4 min-w-[90%] min-h-[618px] pl-13">
@@ -48,6 +49,17 @@ function UiHero() {
                   className="min-w-[40px] min-h-[40px] cursor-pointer hover:opacity-80 transition relative z-50"
                 />
               </a>
+              <a
+                href="https://github.com/imranahmetov-png/my-blog"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={github}
+                  alt="GitHub"
+                  className="min-w-[40px] min-h-[40px] cursor-pointer hover:opacity-80 transition relative z-50"
+                />
+              </a>
             </div>
           </div>
           <div className="flex items-center gap-4 min-w-[389px] min-h-[48px]">
@@ -66,11 +78,16 @@ function UiHero() {
             </div>
           </div>
         </div>
-        <div className="flex min-w-[387px] min-h-[84px] justify-center items-center gap-[30px] rounded-[8px] bg-[#ffffff]/4 p-[24px] text-center text-[20px] font-bold text-[#FFFFFF]">
-          <div className="min-w-[189px] min-h-[36px] flex-col items-start justify-start gap-[12px] pt-[6px] pb-[6px] pr-[30px] font-bold text-white border-r border-[#959595]">
+        <div className="flex min-w-[408px] min-h-[99px] justify-center items-center gap-[15px] rounded-[8px] bg-[#ffffff]/4 p-[24px] text-center text-[20px] font-bold text-[#FFFFFF]">
+          <div className="flex-col items-center justify-center gap-[15px] pt-[6px] pb-[6px] pr-[30px] font-bold text-white border-r border-[#959595]">
+            Experiences
+          </div>
+          <div className="flex items-center justify-center gap-[15px] pt-[6px] pb-[6px] pr-[30px] font-bold text-white border-r border-[#959595]">
+            Project done
+          </div>
+          <div className="flex items-center justify-center">
             Novice specialist
           </div>
-          Project done
         </div>
       </div>
       <div className="rounded-full min-w-[618px] min-h-[618px] bg-[#E46400] flex justify-center items-center">
