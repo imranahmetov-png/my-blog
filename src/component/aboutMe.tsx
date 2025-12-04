@@ -47,13 +47,13 @@ function UiAboutMe() {
               and turn my ideas into functional interfaces.
             </p>
           </div>
-          <div className="w-[224px] h-[48px] bg-gradient-to-r from-[#FD6F00] to-[#E46400] linear-gradient gap-[10px] border-2 px-5 py-2 rounded-lg text-[20px] text-center font-bold flex flex-col justify-between items-center">
+          <div className="w-[224px] h-[48px] bg-gradient-to-r from-[#FD6F00] to-[#E46400] rounded-lg text-[20px] text-center font-bold flex justify-center items-center gap-[10px] px-[30px]">
             <img
               src={downloadCv}
               alt="DownloadCv"
-              className="min-w-[48px] min-h-[48px] rounded-full object-cover"
+              className="min-w-[24px] min-h-[24px] rounded-full object-cover"
             />
-            <div className="text-[20px] text-[#FFFFFF] font-bold">
+            <div className="text-[20px] text-[#FFFFFF] font-bold whitespace-nowrap">
               Download CV
             </div>
           </div>
