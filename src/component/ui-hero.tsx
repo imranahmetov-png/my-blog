@@ -1,4 +1,4 @@
-import avatar from '@/assets/img/image 2.svg'
+import avatar from '@/assets/img/avatar.svg'
 import inst from '@/assets/img/inst.svg'
 import klyaksa from '@/assets/img/klyaksa.svg'
 import telegram from '@/assets/img/telegram.svg'
