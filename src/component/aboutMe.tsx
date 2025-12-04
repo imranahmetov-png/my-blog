@@ -1,5 +1,5 @@
 import avatar from '../assets/img/avatar.svg'
-import dowlandCv from '../assets/img/dowlandCv.svg'
+import downloadCv from '../assets/img/downloadCv.svg'
 function UiAboutMe() {
   return (
     <div className="bg-[#121212] min-w-screen min-h-screen flex flex-col justify-start items-center pt-20 gap-[40px]">
@@ -49,8 +49,8 @@ function UiAboutMe() {
           </div>
           <div className="w-[224px] h-[48px] bg-gradient-to-r from-[#FD6F00] to-[#E46400] linear-gradient gap-[10px] border-2 px-5 py-2 rounded-lg text-[20px] text-center font-bold flex flex-col justify-between items-center">
             <img
-              src={dowlandCv}
-              alt="dowlandCv"
+              src={downloadCv}
+              alt="DownloadCv"
               className="min-w-[48px] min-h-[48px] rounded-full object-cover"
             />
             <div className="text-[20px] text-[#FFFFFF] font-bold">
