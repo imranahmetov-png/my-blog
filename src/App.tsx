@@ -2,6 +2,8 @@ import UIHeader from './component/header'
 import UiHero from './component/ui-hero'
 import UiFrame from './component/service'
 import UiAboutMe from './component/aboutMe'
+import UiPortfolio from './component/Portfolio'
+
 function App() {
   return (
     <div className="bg-[#121212] min-w-screen min-h-screen pt-[57px] sm:min-w-screen overflow-x-hidden sm:min-h-screen">
@@ -12,7 +14,7 @@ function App() {
           <UiHero />
         </div>
         {/*Services Section */}
-        <div className=" flex flex-col justify-start items-center gap-[150px] p-4">
+        <div className="flex flex-col justify-start items-center gap-[150px] p-4">
           <UiFrame />
         </div>
         {/* About Me Section */}
@@ -20,6 +22,9 @@ function App() {
           <UiAboutMe />
         </div>
         {/* Portfolio Section */}
+        <div className="flex flex-col justify-start items-center gap-[150px] p-4">
+          <UiPortfolio />
+        </div>
       </div>
     </div>
   )

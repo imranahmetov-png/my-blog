@@ -3,7 +3,7 @@ import inst from '@/assets/img/inst.svg'
 import klyaksa from '@/assets/img/klyaksa.svg'
 import telegram from '@/assets/img/telegram.svg'
 import github from '@/assets/img/github.svg'
-function UiHero() {
+export default function UiHero() {
   return (
     <div className="flex justify-between items-center px-8 py-4 min-w-[90%] min-h-[618px] pl-13">
       <div className="flex flex-col min-w-[408px] min-h-[511px] justify-start items-start gap-[80px]">
@@ -105,4 +105,3 @@ function UiHero() {
     </div>
   )
 }
-export default UiHero
