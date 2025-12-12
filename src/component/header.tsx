@@ -1,6 +1,6 @@
 export default function UIHeader() {
   return (
-    <header className="flex justify-between text-align:center items-center px-8 py-4 min-w-[90%] min-h-[43px]">
+    <header className="flex justify-between text-align:center items-center px-8 py-4">
       <div className="relative text-transparent bg-clip-text bg-gradient-to-r from-[#FD6F00] to-[#E60026] text-[30px] text-align:left min-w-[81px] min-h-[39px] flex items-center pl-4 font-bold ">
         Imran
       </div>

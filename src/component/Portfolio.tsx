@@ -1,7 +1,12 @@
 export default function UiPortfolio() {
   return (
-    <div className="w-[1440px] h-[1679px] gap-[70px]">
-      <div className=""></div>
+    <div className=" gap-[70px]">
+      <div className="flex">
+        <p>ТЕКСТ С ФЛЕКСОМ</p>
+      </div>
+      <div>
+        <p>ТЕКСТ БЕЗ ФЛЕКСА</p>
+      </div>
     </div>
   )
 }

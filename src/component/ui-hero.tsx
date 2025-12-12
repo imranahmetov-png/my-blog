@@ -5,12 +5,12 @@ import telegram from '@/assets/img/telegram.svg'
 import github from '@/assets/img/github.svg'
 export default function UiHero() {
   return (
-    <div className="flex justify-between items-center px-8 py-4 min-w-[90%] min-h-[618px] pl-13">
-      <div className="flex flex-col min-w-[408px] min-h-[511px] justify-start items-start gap-[80px]">
-        <div className="flex flex-col min-w-[408px] min-h-[347px] justify-start items-start gap-[61px]">
-          <div className="flex flex-col min-w-[408px] min-h-[238px] justify-start items-start gap-[17px]">
+    <div className="flex justify-between items-center gap-[150px]">
+      <div className="flex flex-col mr-auto justify-start items-start gap-[80px]">
+        <div className="flex flex-col justify-start items-start gap-[61px]">
+          <div className="flex flex-col justify-start items-start gap-[17px]">
             {/*frame 1*/}
-            <div className="flex flex-col min-w-[408px] min-h-[181px] justify-start items-start gap-[24px]">
+            <div className="flex flex-col justify-start items-start gap-[24px]">
               <div className="flex flex-col min-w-[219px] min-h-[73px] justify-start items-start text-left gap-[10px] flex-wrap">
                 <p className="text-[24px] text-left text-[#707070] typewriter-1">
                   Hi I am
@@ -90,7 +90,7 @@ export default function UiHero() {
           </div>
         </div>
       </div>
-      <div className="rounded-full min-w-[618px] min-h-[618px] bg-[#E46400] flex justify-center items-center">
+      <div className="rounded-full ml-auto min-w-[618px] min-h-[618px] bg-[#E46400] flex justify-center items-center">
         <img
           src={avatar}
           alt="avatar"

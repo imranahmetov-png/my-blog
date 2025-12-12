@@ -3,7 +3,7 @@ import downloadCv from '../assets/img/downloadCv.svg'
 import figmaIcone from '../assets/img/figmaIcone.svg'
 export default function UiAboutMe() {
   return (
-    <div className="flex flex-col justify-start items-center gap-10">
+    <div className="flex flex-col justify-start items-center">
       <div className="w-[188px] h-[98px] flex flex-col">
         <div className="h-[48px] flex items-center justify-center">
           <p className="text-[#FEFEFE] text-[40px] font-bold leading-none whitespace-nowrap">
@@ -17,9 +17,9 @@ export default function UiAboutMe() {
           </p>
         </div>
       </div>
-      <div className="w-[1296px] h-[1135px] flex flex-col justify-between items-center gap-25">
-        <div className="flex justify-between items-center w-[1297px] h-[808px] gap-25">
-          <div className=" w-[566px] h-[808px] pt-32 px-[22px]">
+      <div className="flex flex-col justify-between items-center gap-25">
+        <div className="flex justify-between items-center gap-25">
+          <div className="">
             <div className="w-[523px] h-[676px] bg-[#FFFFFF]/4 flex flex-col justify-between items-center px-[48px] pl-16 rounded-t-[261.5px] rounded-b-[12px] p-[32px] ">
               <img
                 src={avatar}
@@ -28,7 +28,7 @@ export default function UiAboutMe() {
               />
             </div>
           </div>
-          <div className="">
+          <div className="flex flex-col items-start">
             <div className="w-[631px] h-[456px] text-[20px] text-[#959595] font-normal leading-[32px]">
               <p className="mb-4">
                 Hi! My name is Imran, I am 17 years old, and I am a sophomore at
