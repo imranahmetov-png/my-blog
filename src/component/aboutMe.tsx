@@ -62,18 +62,53 @@ export default function UiAboutMe() {
           </div>
         </div>
         <div className="w-[1227px] h-[227px] flex justify-start items-start gap-[96px]">
-          <div className="w-[200px] h-[227px] flex flex-col justify-between items-center gap-[24px]">
-            <img
-              src={figmaIcone}
-              alt="figmaIcone"
-              className="min-w-[60.19px] min-h-[60.19px] rounded-full object-cover"
-            />
-            <div className="w-[77px] h-[73px] flex flex-col justify-between items-center gap-[8px]">
+          <div className="w-[200px] h-[227px] flex flex-col items-center gap-[24px]">
+            <div className="relative w-[130px] h-[130px]">
+              <div
+                className="absolute inset-0 rounded-full border-lg"
+                style={{
+                  background:
+                    'conic-gradient(#FD6F00 1%, #E46400 10%, #121212 10%)',
+                }}
+              ></div>
+              <div className="absolute inset-[9px] bg-[#121212] rounded-full"></div>
+              <img
+                src={figmaIcone}
+                alt="figmaIcone"
+                className="min-w-[60.19px] min-h-[60.19px] absolute inset-[12px] z-20 rounded-full object-cover"
+              />
+            </div>
+            <div className="w-[77px] h-[73px] flex flex-col items-center gap-[8px]">
               <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD6F00] to-[#E46400] text-[30px] font-bold">
-                100%
+                10%
               </div>
               <div className="text-[24px] text-[#959595] font-normal text-center ">
                 Figma
+              </div>
+            </div>
+          </div>
+          <div className="w-[200px] h-[227px] flex flex-col items-center gap-[24px]">
+            <div className="relative w-[130px] h-[130px]">
+              <div
+                className="absolute inset-0 rounded-full border-lg"
+                style={{
+                  background:
+                    'conic-gradient(#FD6F00 1%, #E46400 10%, #121212 10%)',
+                }}
+              ></div>
+              <div className="absolute inset-[9px] bg-[#121212] rounded-full"></div>
+              <img
+                src={figmaIcone}
+                alt="figmaIcone"
+                className="min-w-[60.19px] min-h-[60.19px] absolute inset-[12px] z-20 rounded-full object-cover"
+              />
+            </div>
+            <div className="w-[77px] h-[73px] flex flex-col items-center gap-[8px]">
+              <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD6F00] to-[#E46400] text-[30px] font-bold">
+                10%
+              </div>
+              <div className="text-[24px] text-[#959595] font-normal text-center ">
+                Css
               </div>
             </div>
           </div>
