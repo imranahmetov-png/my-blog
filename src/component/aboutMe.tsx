@@ -202,7 +202,7 @@ export default function UiAboutMe() {
                   stroke="url(#grad)"
                   stroke-width="8"
                   fill="none"
-                  stroke-dasharray="28.9 260.1"
+                  stroke-dasharray={`${String(289 * 0.1)} 260.1`} //
                   stroke-dashoffset="0"
                   stroke-linecap="round"
                   className="transition-all duration-500"
