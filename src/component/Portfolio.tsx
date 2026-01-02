@@ -2,9 +2,9 @@ import photoEX1 from '@/assets/img/photoEX1.svg'
 export default function UiPortfolio() {
   const Projects = [
     {
-      name: 'project1',
+      name: 'Personal web said',
       img: photoEX1,
-      categories: ['web'],
+      categories: ['Web'],
     },
     {
       name: 'project1',
@@ -44,7 +44,7 @@ export default function UiPortfolio() {
 
       {/* Галерея проектов */}
       <div className="w-full flex justify-center items-center">
-        <div className="max-w-[1445px] flex gap-[24px] flex-wrap">
+        <div className="max-w-[1445px] flex justify-center items-center gap-[24px] flex-wrap">
           {/* Карточка 1 */}
           {Projects.map((project) => (
             <div className="w-[415px] h-[473px] rounded-[16px] overflow-hidden">
