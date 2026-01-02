@@ -19,14 +19,12 @@ export default function UiAboutMe() {
       </div>
       <div className="flex flex-col justify-between items-center gap-25">
         <div className="flex justify-between items-center gap-25">
-          <div className="">
-            <div className="w-[523px] h-[676px] bg-[#FFFFFF]/4 flex flex-col justify-between items-center px-[48px] pl-16 rounded-t-[261.5px] rounded-b-[12px] p-[32px] ">
-              <img
-                src={avatar}
-                alt="avatar"
-                className="min-w-[550px] min-h-[550px] rounded-full object-cover"
-              />
-            </div>
+          <div className="w-[523px] h-[676px] bg-[#FFFFFF]/4 flex flex-col justify-between items-center px-[48px] pl-16 rounded-t-[261.5px] rounded-b-[12px] p-[32px] ">
+            <img
+              src={avatar}
+              alt="avatar"
+              className="min-w-[550px] min-h-[550px] rounded-full object-cover"
+            />
           </div>
           <div className="flex flex-col items-start">
             <div className="w-[631px] h-[456px] text-[20px] text-[#959595] font-normal leading-[32px]">

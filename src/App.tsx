@@ -22,7 +22,7 @@ function App() {
           <UiAboutMe />
         </div>
         {/* Portfolio Section */}
-        <div className="flex flex-col justify-start items-center gap-[150px] p-4">
+        <div className="flex flex-col justify-center items-center gap-[150px] p-4">
           <UiPortfolio />
         </div>
       </div>
