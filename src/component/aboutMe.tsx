@@ -1,7 +1,52 @@
 import avatar from '../assets/img/avatar.svg'
 import downloadCv from '../assets/img/downloadCv.svg'
 import figmaIcone from '../assets/img/figmaIcone.svg'
+// при смене (perсent: 0.1) следи за (percentText: ['10%'])
 export default function UiAboutMe() {
+  const CircleBar = [
+    {
+      circle: 'circle',
+      name: ['Figma'],
+      perсent: 0.1,
+      percentText: ['10%'],
+      img: figmaIcone,
+      line: 'line',
+    },
+    {
+      circle: 'circle',
+      name: ['JS'],
+      perсent: 0.1,
+      percentText: ['10%'],
+      img: figmaIcone,
+      line: 'line',
+    },
+    {
+      circle: 'circle',
+      name: ['Css'],
+      perсent: 0.1,
+      percentText: ['10%'],
+      img: figmaIcone,
+      line: 'line',
+    },
+    {
+      circle: 'circle',
+      name: ['Html'],
+      perсent: 0.3,
+      percentText: ['30%'],
+      img: figmaIcone,
+      line: 'line',
+    },
+    {
+      circle: 'circle',
+      name: ['React'],
+      perсent: 0.5,
+      percentText: ['50%'],
+      img: figmaIcone,
+      line: 'line',
+    },
+  ]
+  const radius = 46
+  const circumference = 2 * Math.PI * radius
   return (
     <div className="flex flex-col justify-start items-center">
       <div className="w-[188px] h-[98px] flex flex-col">
@@ -61,276 +106,66 @@ export default function UiAboutMe() {
         </div>
         {/* Прогресс бары */}
         <div className="flex justify-between items-start w-full">
-          {/* Первый прогресс бар */}
-          <div className="w-[200px] h-[227px] flex flex-col items-center gap-[24px]">
-            <div className="relative flex items-center justify-center">
-              <svg
-                width="130"
-                height="130"
-                viewBox="0 0 100 100"
-                className="transform rotate-[-90deg]"
-              >
-                {/* Характеристики круга */}
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="46"
-                  stroke="#959595"
-                  stroke-width="7"
-                  fill="none"
+          {CircleBar.map((s, index) => (
+            <div
+              key={index}
+              className="w-[200px] h-[227px] flex flex-col items-center gap-[24px]"
+            >
+              <div className="relative flex items-center justify-center">
+                <svg
+                  width="130"
+                  height="130"
+                  viewBox="0 0 100 100"
+                  className="transform rotate-[-90deg]"
+                >
+                  {/* Характеристики круга */}
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="46"
+                    stroke="#959595"
+                    stroke-width="7"
+                    fill="none"
+                  />
+                  {/* Линия градиента(програесс) */}
+                  <defs>
+                    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#FD6F00" />
+                      <stop offset="100%" stopColor="#E46400" />
+                    </linearGradient>
+                  </defs>
+                  {/* (Сам прогресс, цвет и проценты)Прогресс */}
+                  {s.line}
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="46"
+                    stroke="url(#grad)"
+                    strokeWidth="8"
+                    fill="none"
+                    stroke-dasharray={`${circumference * s.perсent} ${
+                      circumference * (1 - s.perсent)
+                    }`} //
+                    stroke-dashoffset="0"
+                    stroke-linecap="round"
+                    className="transition-all duration-500"
+                  />
+                </svg>
+                <img
+                  src={s.img}
+                  className="min-w-[60.19px] min-h-[60.19px] absolute z-20 rounded-full object-cover"
                 />
-                {/* Линия градиента(програесс) */}
-                <defs>
-                  <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#FD6F00" />
-                    <stop offset="100%" stopColor="#E46400" />
-                  </linearGradient>
-                </defs>
-                {/* (Сам прогресс, цвет и проценты)Прогресс */}
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="46"
-                  stroke="url(#grad)"
-                  stroke-width="8"
-                  fill="none"
-                  stroke-dasharray="28.9 260.1"
-                  stroke-dashoffset="0"
-                  stroke-linecap="round"
-                  className="transition-all duration-500"
-                />
-              </svg>
-              <img
-                src={figmaIcone}
-                alt="figmaIcone"
-                className="min-w-[60.19px] min-h-[60.19px] absolute z-20 rounded-full object-cover"
-              />
-            </div>
-            <div className="w-[77px] h-[73px] flex flex-col items-center gap-[8px]">
-              <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD6F00] to-[#E46400] text-[30px] font-bold">
-                10%
               </div>
-              <div className="text-[24px] text-[#959595] font-normal text-center ">
-                Figma
-              </div>
-            </div>
-          </div>
-          {/* Второй прогресс бар */}
-          <div className="w-[200px] h-[227px] flex flex-col items-center gap-[24px]">
-            <div className="relative flex items-center justify-center">
-              <svg
-                width="130"
-                height="130"
-                viewBox="0 0 100 100"
-                className="transform rotate-[-90deg]"
-              >
-                {/* Характеристики круга */}
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="46"
-                  stroke="#959595"
-                  stroke-width="7"
-                  fill="none"
-                />
-                {/* Линия градиента(програесс) */}
-                <defs>
-                  <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#FD6F00" />
-                    <stop offset="100%" stopColor="#E46400" />
-                  </linearGradient>
-                </defs>
-                {/* (Сам прогресс, цвет и проценты)Прогресс */}
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="46"
-                  stroke="url(#grad)"
-                  stroke-width="8"
-                  fill="none"
-                  stroke-dasharray="28.9 260.1"
-                  stroke-dashoffset="0"
-                  stroke-linecap="round"
-                  className="transition-all duration-500"
-                />
-              </svg>
-              <img
-                src={figmaIcone}
-                alt="figmaIcone"
-                className="min-w-[60.19px] min-h-[60.19px] absolute z-20 rounded-full object-cover"
-              />
-            </div>
-            <div className="w-[77px] h-[73px] flex flex-col items-center gap-[8px]">
-              <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD6F00] to-[#E46400] text-[30px] font-bold">
-                10%
-              </div>
-              <div className="text-[24px] text-[#959595] font-normal text-center ">
-                Css
+              <div className="w-[77px] h-[73px] flex flex-col items-center gap-[8px]">
+                <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD6F00] to-[#E46400] text-[30px] font-bold">
+                  {s.percentText}
+                </div>
+                <div className="text-[24px] text-[#959595] font-normal text-center ">
+                  {s.name}
+                </div>
               </div>
             </div>
-          </div>
-          {/* Третий прогресс бар */}
-          <div className="w-[200px] h-[227px] flex flex-col items-center gap-[24px]">
-            <div className="relative flex items-center justify-center">
-              <svg
-                width="130"
-                height="130"
-                viewBox="0 0 100 100"
-                className="transform rotate-[-90deg]"
-              >
-                {/* Характеристики круга */}
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="46"
-                  stroke="#959595"
-                  stroke-width="7"
-                  fill="none"
-                />
-                {/* Линия градиента(програесс) */}
-                <defs>
-                  <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#FD6F00" />
-                    <stop offset="100%" stopColor="#E46400" />
-                  </linearGradient>
-                </defs>
-                {/* (Сам прогресс, цвет и проценты)Прогресс */}
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="46"
-                  stroke="url(#grad)"
-                  stroke-width="8"
-                  fill="none"
-                  stroke-dasharray={`${String(289 * 0.1)} 260.1`} //
-                  stroke-dashoffset="0"
-                  stroke-linecap="round"
-                  className="transition-all duration-500"
-                />
-              </svg>
-              <img
-                src={figmaIcone}
-                alt="figmaIcone"
-                className="min-w-[60.19px] min-h-[60.19px] absolute z-20 rounded-full object-cover"
-              />
-            </div>
-            <div className="w-[77px] h-[73px] flex flex-col items-center gap-[8px]">
-              <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD6F00] to-[#E46400] text-[30px] font-bold">
-                10%
-              </div>
-              <div className="text-[24px] text-[#959595] font-normal text-center ">
-                Html
-              </div>
-            </div>
-          </div>
-          {/* Четвертый прогресс бар */}
-          <div className="w-[200px] h-[227px] flex flex-col items-center gap-[24px]">
-            <div className="relative flex items-center justify-center">
-              <svg
-                width="130"
-                height="130"
-                viewBox="0 0 100 100"
-                className="transform rotate-[-90deg]"
-              >
-                {/* Характеристики круга */}
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="46"
-                  stroke="#959595"
-                  stroke-width="7"
-                  fill="none"
-                />
-                {/* Линия градиента(програесс) */}
-                <defs>
-                  <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#FD6F00" />
-                    <stop offset="100%" stopColor="#E46400" />
-                  </linearGradient>
-                </defs>
-                {/* (Сам прогресс, цвет и проценты)Прогресс */}
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="46"
-                  stroke="url(#grad)"
-                  stroke-width="8"
-                  fill="none"
-                  stroke-dasharray="28.9 260.1"
-                  stroke-dashoffset="0"
-                  stroke-linecap="round"
-                  className="transition-all duration-500"
-                />
-              </svg>
-              <img
-                src={figmaIcone}
-                alt="figmaIcone"
-                className="min-w-[60.19px] min-h-[60.19px] absolute z-20 rounded-full object-cover"
-              />
-            </div>
-            <div className="w-[77px] h-[73px] flex flex-col items-center gap-[8px]">
-              <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD6F00] to-[#E46400] text-[30px] font-bold">
-                10%
-              </div>
-              <div className="text-[24px] text-[#959595] font-normal text-center ">
-                JavaScript
-              </div>
-            </div>
-          </div>
-          {/* Пятый прогресс бар */}
-          <div className="w-[200px] h-[227px] flex flex-col items-center gap-[24px]">
-            <div className="relative flex items-center justify-center">
-              <svg
-                width="130"
-                height="130"
-                viewBox="0 0 100 100"
-                className="transform rotate-[-90deg]"
-              >
-                {/* Характеристики круга */}
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="46"
-                  stroke="#959595"
-                  stroke-width="7"
-                  fill="none"
-                />
-                {/* Линия градиента(програесс) */}
-                <defs>
-                  <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#FD6F00" />
-                    <stop offset="100%" stopColor="#E46400" />
-                  </linearGradient>
-                </defs>
-                {/* (Сам прогресс, цвет и проценты)Прогресс */}
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="46"
-                  stroke="url(#grad)"
-                  stroke-width="8"
-                  fill="none"
-                  stroke-dasharray="28.9 260.1"
-                  stroke-dashoffset="0"
-                  stroke-linecap="round"
-                  className="transition-all duration-500"
-                />
-              </svg>
-              <img
-                src={figmaIcone}
-                alt="figmaIcone"
-                className="min-w-[60.19px] min-h-[60.19px] absolute z-20 rounded-full object-cover"
-              />
-            </div>
-            <div className="w-[77px] h-[73px] flex flex-col items-center gap-[8px]">
-              <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD6F00] to-[#E46400] text-[30px] font-bold">
-                10%
-              </div>
-              <div className="text-[24px] text-[#959595] font-normal text-center ">
-                React
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
@@ -340,3 +175,8 @@ export default function UiAboutMe() {
 //whitespace-nowrap → гарантирует, что текст никогда не перенесётся на вторую строку
 //leading-none → убирает лишнюю высоту строки
 //px-3 —отступы слева и справа по 0.75rem (12px)
+
+//Автоматические вычисления линии круга{
+//circumference * s.percent → видимая часть линии
+//circumference * (1 - s.percent) → невидимая часть линии
+//s.percent — это число от 0 до 1 (например, 0.1 = 10%, 0.5 = 50%)}

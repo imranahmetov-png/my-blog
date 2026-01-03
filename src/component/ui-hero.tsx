@@ -4,6 +4,11 @@ import klyaksa from '@/assets/img/klyaksa.svg'
 import telegram from '@/assets/img/telegram.svg'
 import github from '@/assets/img/github.svg'
 export default function UiHero() {
+  const startDate = new Date('2025-09-17') // дата начала опыта
+  const today = new Date() // текущая дата
+  const diffTime = today.getTime() - startDate.getTime() // разница в миллисекундах
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)) // переводим в дни
+
   return (
     <div className="flex justify-between items-center gap-[150px]">
       <div className="flex flex-col mr-auto justify-start items-start gap-[80px]">
@@ -79,14 +84,21 @@ export default function UiHero() {
           </div>
         </div>
         <div className="flex min-w-[408px] min-h-[99px] justify-center items-center gap-[15px] rounded-[8px] bg-[#ffffff]/4 p-[24px] text-center text-[20px] font-bold text-[#FFFFFF]">
-          <div className="flex-col items-center justify-center gap-[15px] pt-[6px] pb-[6px] pr-[30px] font-bold text-white border-r border-[#959595]">
-            Experiences
+          <div className="flex flex-col items-center justify-center pr-[30px] border-r border-[#959595]">
+            {/* число дней сверху */}
+            <div className="flex-1 text-[24px] font-bold text-[#FD6F00]">
+              {diffDays} day
+            </div>
+            {/* название снизу */}
+            <div className="flex-1 text-[20px] font-bold">Experiences</div>
           </div>
-          <div className="flex items-center justify-center gap-[15px] pt-[6px] pb-[6px] pr-[30px] font-bold text-white border-r border-[#959595]">
-            Project done
+          <div className="flex flex-col items-center justify-center pl-[15px] pr-[30px] border-r border-[#959595]">
+            <div className="flex-1 text-[24px] font-bold text-[#FD6F00]">1</div>
+            <div className="flex-1 text-[20px] font-bold">Project done</div>
           </div>
-          <div className="flex items-center justify-center">
-            Novice specialist
+          <div className="flex flex-col items-center justify-center pl-[15px] pr-[5px]">
+            <div className="flex-1 text-[24px] font-bold">Novice</div>
+            <div className="flex-1 text-[20px] font-bold">specialist</div>
           </div>
         </div>
       </div>

@@ -3,11 +3,11 @@ import Avatar from '@/assets/img/Avatar.svg'
 import { useState } from 'react'
 
 export default function UiPortfolio() {
-  const [selectedTag, setSelectedTag] = useState('all')
+  const [selectedTag, setSelectedTag] = useState('All')
 
   const Projects = [
     {
-      name: 'Personal web said',
+      name: 'Personal website',
       img: photoEX1,
       categories: ['Web'],
     },
@@ -19,31 +19,31 @@ export default function UiPortfolio() {
     {
       name: 'project1',
       img: photoEX1,
-      categories: ['web'],
+      categories: ['Web'],
     },
     {
       name: 'project1',
       img: photoEX1,
-      categories: ['web'],
+      categories: ['Web'],
     },
     {
       name: 'project1',
       img: photoEX1,
-      categories: ['web'],
+      categories: ['Web'],
     },
     {
       name: 'project1',
       img: photoEX1,
-      categories: ['web'],
+      categories: ['Web'],
     },
   ]
   const allCategories = [
-    'all',
+    'All',
     ...new Set(Projects.flatMap((p) => p.categories)),
   ]
 
   const filteredProjects =
-    selectedTag === 'all'
+    selectedTag === 'All'
       ? Projects
       : Projects.filter((p) => p.categories.includes(selectedTag))
 
@@ -59,7 +59,12 @@ export default function UiPortfolio() {
               <button
                 key={tag}
                 onClick={() => setSelectedTag(tag)}
-                className={`px-4 bg-white py-2 rounded-lg transition-all mx-2 mb-4`}
+                className={`px-4 py-2 rounded-lg transition-all mx-2 mb-4
+                  ${
+                    tag === 'All'
+                      ? 'bg-gradient-to-r from-[#FD6F00] to-[#E46400] text-[#FFFFFF] font-bold hover:bg-[#ff8800] transition cursor-pointer'
+                      : 'bg-white/8 text-[#C6C6C6] text-[16px] font-bold cursor-pointer'
+                  }`}
               >
                 {tag}
               </button>
@@ -95,3 +100,7 @@ export default function UiPortfolio() {
   )
 }
 //overflow-hidden -> Обрезает всё, что выходит за границы контейнера
+//  Работа кнопок
+//${ tag === 'All'
+// ? ЕСЛИ АЛЛ, РАБОТАЕТ ЭТО
+// : ЕСЛИ НЕТ, ТО ЭТО }
