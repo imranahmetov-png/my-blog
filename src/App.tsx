@@ -4,6 +4,8 @@ import UiFrame from './component/service'
 import UiAboutMe from './component/aboutMe'
 import UiPortfolio from './component/Portfolio'
 import UiContactMe from './component/contactMe'
+import UiEnd from './component/ui-end'
+
 // tracking-[0.03em] ВЕЗДЕ РАСТАВЬ
 function App() {
   return (
@@ -44,6 +46,10 @@ function App() {
           className="flex flex-col justify-center items-center gap-[150px] p-4"
         >
           <UiContactMe />
+        </div>
+        {/* UI END SECTION */}
+        <div className="flex flex-col justify-start items-center gap-[150px] p-4">
+          <UiEnd />
         </div>
       </div>
     </div>

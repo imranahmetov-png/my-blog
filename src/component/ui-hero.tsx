@@ -4,6 +4,7 @@ import klyaksa from '@/assets/img/klyaksa.svg'
 import telegram from '@/assets/img/telegram.svg'
 import github from '@/assets/img/github.svg'
 import WhatsApp from '@/assets/img/WhatsApp.svg'
+
 export default function UiHero() {
   const startDate = new Date('2025-09-17') // дата начала опыта
   const today = new Date() // текущая дата
@@ -30,7 +31,7 @@ export default function UiHero() {
               </p>
             </div>
             {/*frame 2*/}
-            <div className="flex items-end gap-2">
+            <div className="flex items-end gap-[20px]">
               {/*Instagram*/}
               <a
                 href="https://www.instagram.com/imra_n_96?igsh=Zmw0NjJxM3k4cHRo&utm_source=qr"
