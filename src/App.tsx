@@ -3,7 +3,8 @@ import UiHero from './component/ui-hero'
 import UiFrame from './component/service'
 import UiAboutMe from './component/aboutMe'
 import UiPortfolio from './component/Portfolio'
-
+import UiContactMe from './component/contactMe'
+// tracking-[0.03em] ВЕЗДЕ РАСТАВЬ
 function App() {
   return (
     <div className="bg-[#121212] min-w-screen min-h-screen pt-[57px] sm:min-w-screen overflow-x-hidden sm:min-h-screen">
@@ -36,6 +37,13 @@ function App() {
           className="flex flex-col justify-center items-center gap-[150px] p-4"
         >
           <UiPortfolio />
+        </div>
+        {/* Contact Me Section */}
+        <div
+          id="Contact me"
+          className="flex flex-col justify-center items-center gap-[150px] p-4"
+        >
+          <UiContactMe />
         </div>
       </div>
     </div>
