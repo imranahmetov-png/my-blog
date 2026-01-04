@@ -1,8 +1,9 @@
 import avatar from '@/assets/img/avatar.svg'
-import inst from '@/assets/img/inst.svg'
+import Instagram from '@/assets/img/Instagram.svg'
 import klyaksa from '@/assets/img/klyaksa.svg'
 import telegram from '@/assets/img/telegram.svg'
 import github from '@/assets/img/github.svg'
+import WhatsApp from '@/assets/img/WhatsApp.svg'
 export default function UiHero() {
   const startDate = new Date('2025-09-17') // дата начала опыта
   const today = new Date() // текущая дата
@@ -29,7 +30,7 @@ export default function UiHero() {
               </p>
             </div>
             {/*frame 2*/}
-            <div className="min-w-[95px] min-h-[40px] flex items-end gap-2">
+            <div className="flex items-end gap-2">
               {/*Instagram*/}
               <a
                 href="https://www.instagram.com/imra_n_96?igsh=Zmw0NjJxM3k4cHRo&utm_source=qr"
@@ -37,7 +38,7 @@ export default function UiHero() {
                 rel="noopener noreferrer"
               >
                 <img
-                  src={inst}
+                  src={Instagram}
                   alt="Instagram"
                   className="min-w-[40px] min-h-[40px] cursor-pointer hover:opacity-80 transition relative z-50"
                 />
@@ -62,6 +63,17 @@ export default function UiHero() {
                 <img
                   src={github}
                   alt="GitHub"
+                  className="min-w-[40px] min-h-[40px] cursor-pointer hover:opacity-80 transition relative z-50"
+                />
+              </a>
+              <a
+                href="https://wa.me/77079614194"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={WhatsApp}
+                  alt="WhatsApp"
                   className="min-w-[40px] min-h-[40px] cursor-pointer hover:opacity-80 transition relative z-50"
                 />
               </a>

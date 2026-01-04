@@ -1,6 +1,10 @@
 import avatar from '../assets/img/avatar.svg'
 import downloadCv from '../assets/img/downloadCv.svg'
-import figmaIcone from '../assets/img/figmaIcone.svg'
+import Figma from '../assets/img/Figma.svg'
+import HTML5 from '../assets/img/HTML5.svg'
+import React from '../assets/img/React.svg'
+import JS from '../assets/img/JS.svg'
+import CSS from '../assets/img/CSS.svg'
 // при смене (perсent: 0.1) следи за (percentText: ['10%'])
 export default function UiAboutMe() {
   const CircleBar = [
@@ -9,7 +13,7 @@ export default function UiAboutMe() {
       name: ['Figma'],
       perсent: 0.1,
       percentText: ['10%'],
-      img: figmaIcone,
+      img: Figma,
       line: 'line',
     },
     {
@@ -17,7 +21,7 @@ export default function UiAboutMe() {
       name: ['JS'],
       perсent: 0.1,
       percentText: ['10%'],
-      img: figmaIcone,
+      img: JS,
       line: 'line',
     },
     {
@@ -25,7 +29,7 @@ export default function UiAboutMe() {
       name: ['Css'],
       perсent: 0.1,
       percentText: ['10%'],
-      img: figmaIcone,
+      img: CSS,
       line: 'line',
     },
     {
@@ -33,7 +37,7 @@ export default function UiAboutMe() {
       name: ['Html'],
       perсent: 0.3,
       percentText: ['30%'],
-      img: figmaIcone,
+      img: HTML5,
       line: 'line',
     },
     {
@@ -41,7 +45,7 @@ export default function UiAboutMe() {
       name: ['React'],
       perсent: 0.5,
       percentText: ['50%'],
-      img: figmaIcone,
+      img: React,
       line: 'line',
     },
   ]
