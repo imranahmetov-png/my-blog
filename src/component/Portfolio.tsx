@@ -1,5 +1,5 @@
-import photoEX1 from '@/assets/img/photoEX1.svg'
-import Avatar from '@/assets/img/Avatar.svg'
+import imgWebSait from '@/assets/img/imgWebSait.png'
+
 import { useState } from 'react'
 
 export default function UiPortfolio() {
@@ -8,32 +8,7 @@ export default function UiPortfolio() {
   const Projects = [
     {
       name: 'Personal website',
-      img: photoEX1,
-      categories: ['Web'],
-    },
-    {
-      name: 'Avatar',
-      img: Avatar,
-      categories: ['Design'],
-    },
-    {
-      name: 'project1',
-      img: photoEX1,
-      categories: ['Web'],
-    },
-    {
-      name: 'project1',
-      img: photoEX1,
-      categories: ['Web'],
-    },
-    {
-      name: 'project1',
-      img: photoEX1,
-      categories: ['Web'],
-    },
-    {
-      name: 'project1',
-      img: photoEX1,
+      img: imgWebSait,
       categories: ['Web'],
     },
   ]

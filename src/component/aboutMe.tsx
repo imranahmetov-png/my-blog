@@ -1,5 +1,4 @@
 import avatar from '../assets/img/avatar.svg'
-import downloadCv from '../assets/img/downloadCv.svg'
 import Figma from '../assets/img/Figma.svg'
 import HTML5 from '../assets/img/HTML5.svg'
 import React from '../assets/img/React.svg'
@@ -96,16 +95,6 @@ export default function UiAboutMe() {
                 and turn my ideas into functional interfaces.
               </p>
             </div>
-            <div className="w-[224px] h-[48px] bg-gradient-to-r from-[#FD6F00] to-[#E46400] rounded-lg text-[20px] text-center font-bold flex justify-center items-center gap-[10px] px-[30px]">
-              <img
-                src={downloadCv}
-                alt="DownloadCv"
-                className="min-w-[24px] min-h-[24px] rounded-full object-cover"
-              />
-              <div className="text-[20px] text-[#FFFFFF] font-bold whitespace-nowrap">
-                Download CV
-              </div>
-            </div>
           </div>
         </div>
         {/* Прогресс бары */}
@@ -149,7 +138,7 @@ export default function UiAboutMe() {
                     fill="none"
                     stroke-dasharray={`${circumference * s.perсent} ${
                       circumference * (1 - s.perсent)
-                    }`} //
+                    }`} // высчитваем видимую и невидимую часть линии
                     stroke-dashoffset="0"
                     stroke-linecap="round"
                     className="transition-all duration-500"

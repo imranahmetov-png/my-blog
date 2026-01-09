@@ -7,120 +7,118 @@ import phone from '@/assets/img/phone.svg'
 
 export default function UiEnd() {
   return (
-    <div className="flex flex-col justify-center items-center px-[80px]">
-      <div className="flex flex-col justify-center items-center gap-[50px]">
-        <p className="relative text-transparent bg-clip-text bg-gradient-to-r from-[#FD6F00] to-[#E60026] text-[30px] tracking-[0.03em] flex items-center font-bold">
-          Imran
-        </p>
-        <nav className="flex gap-[60px] justify-center items-center">
-          <a
-            href="#Home"
-            className="relative text-[#959595] tracking-[0.03em] font-medium transition text-[20px] text-center flex items-center pl-4"
-          >
-            Home
-          </a>
-          <a
-            href="#Services"
-            className="relative text-[#959595] tracking-[0.03em] font-medium transition text-[20px] text-center flex items-center pl-4"
-          >
-            Services
-          </a>
-          <a
-            href="#About me"
-            className="relative text-[#959595] tracking-[0.03em] font-medium transition text-[20px] text-center flex items-center pl-4"
-          >
-            About me
-          </a>
-          <a
-            href="#Portfolio"
-            className="relative text-[#959595] tracking-[0.03em] font-medium transition text-[20px] text-center flex items-center pl-4"
-          >
-            Portfolio
-          </a>
-          <a
-            href="#Contact me"
-            className="relative text-[#959595] tracking-[0.03em] font-medium transition text-[20px] text-center flex items-center pl-4"
-          >
-            Contact me
-          </a>
-        </nav>
+    <div className="flex flex-col justify-center items-center gap-[50px] px-[80px]">
+      <p className="relative text-transparent bg-clip-text bg-gradient-to-r from-[#FD6F00] to-[#E60026] text-[30px] font-bold tracking-[0.03em] flex items-center pt-[40px]">
+        Imran
+      </p>
+      <nav className="flex gap-[60px] justify-center items-center">
+        <a
+          href="#Home"
+          className="relative text-[#959595] tracking-[0.03em] font-medium transition text-[20px] text-center flex items-center pl-4"
+        >
+          Home
+        </a>
+        <a
+          href="#Services"
+          className="relative text-[#959595] tracking-[0.03em] font-medium transition text-[20px] text-center flex items-center pl-4"
+        >
+          Services
+        </a>
+        <a
+          href="#About me"
+          className="relative text-[#959595] tracking-[0.03em] font-medium transition text-[20px] text-center flex items-center pl-4"
+        >
+          About me
+        </a>
+        <a
+          href="#Portfolio"
+          className="relative text-[#959595] tracking-[0.03em] font-medium transition text-[20px] text-center flex items-center pl-4"
+        >
+          Portfolio
+        </a>
+        <a
+          href="#Contact me"
+          className="relative text-[#959595] tracking-[0.03em] font-medium transition text-[20px] text-center flex items-center pl-4"
+        >
+          Contact me
+        </a>
+      </nav>
 
-        <div className="flex items-end gap-[20px]">
-          {/*Instagram*/}
-          <a
-            href="https://www.instagram.com/imra_n_96?igsh=Zmw0NjJxM3k4cHRo&utm_source=qr"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={Instagram}
-              alt="Instagram"
-              className="min-w-[40px] min-h-[40px] cursor-pointer hover:opacity-80 transition relative z-50"
-            />
-          </a>
-          {/*Telegram*/}
-          <a
-            href="https://t.me/Shifu_km"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={telegram}
-              alt="Telegram"
-              className="min-w-[40px] min-h-[40px] cursor-pointer hover:opacity-80 transition relative z-50"
-            />
-          </a>
-          <a
-            href="https://github.com/imranahmetov-png/my-blog"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={github}
-              alt="GitHub"
-              className="min-w-[40px] min-h-[40px] cursor-pointer hover:opacity-80 transition relative z-50"
-            />
-          </a>
-          <a
-            href="https://wa.me/77079614194"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={WhatsApp}
-              alt="WhatsApp"
-              className="min-w-[40px] min-h-[40px] cursor-pointer hover:opacity-80 transition relative z-50"
-            />
-          </a>
+      <div className="flex items-end gap-[20px]">
+        {/*Instagram*/}
+        <a
+          href="https://www.instagram.com/imra_n_96?igsh=Zmw0NjJxM3k4cHRo&utm_source=qr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={Instagram}
+            alt="Instagram"
+            className="min-w-[40px] min-h-[40px] cursor-pointer hover:opacity-80 transition relative z-50"
+          />
+        </a>
+        {/*Telegram*/}
+        <a
+          href="https://t.me/Shifu_km"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={telegram}
+            alt="Telegram"
+            className="min-w-[40px] min-h-[40px] cursor-pointer hover:opacity-80 transition relative z-50"
+          />
+        </a>
+        <a
+          href="https://github.com/imranahmetov-png/my-blog"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={github}
+            alt="GitHub"
+            className="min-w-[40px] min-h-[40px] cursor-pointer hover:opacity-80 transition relative z-50"
+          />
+        </a>
+        <a
+          href="https://wa.me/77079614194"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={WhatsApp}
+            alt="WhatsApp"
+            className="min-w-[40px] min-h-[40px] cursor-pointer hover:opacity-80 transition relative z-50"
+          />
+        </a>
+      </div>
+
+      <div className="flex flex-row justify-center items-center gap-10">
+        <div className="flex flex-row items-center gap-[14px]">
+          <img
+            src={mail}
+            alt="Mail"
+            className="min-w-[24px] min-h-[24px] relative"
+          />
+          <p className="text-[#959595] text-[20px] tracking-[0.03em] font-bold">
+            imranahmetov28@gmail.com
+          </p>
         </div>
-
-        <div className="flex flex-row justify-center items-center gap-10">
-          <div className="flex flex-row items-center gap-[14px]">
-            <img
-              src={mail}
-              alt="Mail"
-              className="min-w-[24px] min-h-[24px] relative"
-            />
-            <p className="text-[#959595] text-[20px] tracking-[0.03em] font-bold">
-              imranahmetov28@gmail.com
-            </p>
-          </div>
-          <div className="flex flex-row items-center gap-[14px]">
-            <img
-              src={phone}
-              alt="Phone"
-              className="min-w-[24px] min-h-[24px] relative"
-            />
-            <p className="text-[#959595] text-[20px] tracking-[0.03em] font-bold">
-              +7 (707) 961-41-94
-            </p>
-          </div>
+        <div className="flex flex-row items-center gap-[14px]">
+          <img
+            src={phone}
+            alt="Phone"
+            className="min-w-[24px] min-h-[24px] relative"
+          />
+          <p className="text-[#959595] text-[20px] tracking-[0.03em] font-bold">
+            +7 (707) 961-41-94
+          </p>
         </div>
+      </div>
 
-        <div className="h-[1px] border-b border-[#959595]">
-          <div className="text-[#707070] text-[16px] tracking-[0.03em] font-bold pr-[120px] pl-[120px] pt-[16px] flex flex-col items-center">
-            © Developed by programmer Akhmetov Imran
-          </div>
+      <div className="h-[1px] border-b border-[#959595]">
+        <div className="text-[#707070] text-[16px] tracking-[0.03em] font-bold pr-[120px] pl-[120px] pt-[16px] flex flex-col items-center pb-[24px]">
+          © Developed by programmer Akhmetov Imran
         </div>
       </div>
     </div>

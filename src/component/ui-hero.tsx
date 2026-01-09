@@ -91,9 +91,6 @@ export default function UiHero() {
                 Hire me
               </div>
             </a>
-            <div className="min-w-[209px] min-h-[48px] border-2 border-[#959595] px-5 py-2 rounded-lg text-[20px] text-[#959595] text-center font-bold">
-              Download CV
-            </div>
           </div>
         </div>
         <div className="flex min-w-[408px] min-h-[99px] justify-center items-center gap-[15px] rounded-[8px] bg-[#ffffff]/4 p-[24px] text-center text-[20px] font-bold text-[#FFFFFF]">

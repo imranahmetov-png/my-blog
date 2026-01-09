@@ -2,33 +2,39 @@ import servisephoto from '../assets/img/servisephoto.svg'
 function UiService() {
   const service = [
     {
-      title: 'App Design',
-      description: 'I can make simple initial websites.',
+      title: 'Web Development',
+      description:
+        'I build simple and responsive websites using HTML, CSS, and Tailwind.',
       img: servisephoto,
     },
     {
-      title: 'App Design',
-      description: 'I can make simple initial websites.',
+      title: 'React Interfaces',
+      description:
+        'I develop clean UI components and simple interactive interfaces with React.',
       img: servisephoto,
     },
     {
-      title: 'App Design',
-      description: 'I can make simple initial websites.',
+      title: 'Code Fixing',
+      description:
+        'I fix bugs, improve code structure, and help with small projects.',
       img: servisephoto,
     },
     {
-      title: 'App Design',
-      description: 'I can make simple initial websites.',
+      title: 'Game Development',
+      description:
+        'I create simple 2D games with basic mechanics, logic, and levels. Experience with a game like Fire and Water.',
       img: servisephoto,
     },
     {
-      title: 'App Design',
-      description: 'I can make simple initial websites.',
+      title: 'Logic & Algorithms',
+      description:
+        'I implement timers, progress bars, counters, and basic game logic.',
       img: servisephoto,
     },
     {
-      title: 'App Design',
-      description: 'I can make simple initial websites.',
+      title: 'Student Projects',
+      description:
+        'I help with educational and college projects, including games and websites.',
       img: servisephoto,
     },
   ]
@@ -43,20 +49,16 @@ function UiService() {
         {service.map((s, i) => (
           <div
             key={i}
-            className="bg-[#FFFFFF]/4 min-w-[420px] min-h-[340px] rounded-xl text-[#575757]"
+            className="bg-[#FFFFFF]/4 w-[420px] min-h-[340px] text-[#575757] flex flex-col rounded-xl py-[34px] px-[34px] gap-[34px]"
           >
-            <div className="min-w-[131px] min-h-[124px] flex flex-col justify-center items-center gap-[16px] pt-[32px]">
-              <img
-                src={s.img}
-                alt={s.title}
-                className="min-w-[70px] min-h-[70px]"
-              />
+            <div className="flex flex-col justify-center items-center gap-[16px]">
+              <img src={s.img} alt={s.title} className="w-[70px] h-[70px]" />
               <div className="font-bold text-[24px] text-[#FD6F00] text-center">
                 {s.title}
               </div>
             </div>
 
-            <div className="min-w-[339px] min-h-[96px] text-center">
+            <div className="text-center font-medium text-[20px] text-[#C6C6C6]text-[#575757] tracking-[0.03em]">
               {s.description}
             </div>
           </div>
