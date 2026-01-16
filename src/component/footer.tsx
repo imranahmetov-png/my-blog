@@ -116,8 +116,8 @@ export default function UiEnd() {
         </div>
       </div>
 
-      <div className="h-[1px] border-b border-[#959595]">
-        <div className="text-[#707070] text-[16px] tracking-[0.03em] font-bold pr-[120px] pl-[120px] pt-[16px] flex flex-col items-center pb-[24px]">
+      <div className="flex flex-col border-t border-[#FFFFFF]/35">
+        <div className="text-[#FFFFFF]/35 text-[16px] tracking-[0.03em] font-bold pr-[120px] pl-[120px] pt-[16px] flex flex-col items-center pb-[24px]">
           © Developed by programmer Akhmetov Imran
         </div>
       </div>

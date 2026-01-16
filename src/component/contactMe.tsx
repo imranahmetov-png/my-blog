@@ -104,27 +104,13 @@ export default function UiContactMe() {
         </div>
 
         <div className="flex items-start gap-[30px]">
-          <div className="w-[491px] h-[54px] bg-white/4 rounded-[8px] flex items-center px-[24px]">
-            {/* Левый текст */}
-            <span className="text-[16px] text-[#959595] tracking-[0.03em] font-medium mr-2">
-              Timeline:
-            </span>
-
-            {/* Поле для ввода */}
-            <input
-              type="text"
-              className="flex-1 bg-transparent text-[16px] text-[#FFFFFF] placeholder-[#959595] focus:outline-none"
-              placeholder=". . ."
-            />
-          </div>
-
           <textarea
             className="w-[491px] h-[162px] bg-white/4 rounded-[8px] text-[16px] text-[#959595] tracking-[0.03em] font-medium px-[24px] py-[14px] resize-none"
             placeholder="Project Details..."
           ></textarea>
         </div>
 
-        <div className="flex flex-col justify-center items-end">
+        <div className="flex flex-col justify-center items-start">
           <button className="w-[127px] h-[48px] text-[#959595] text-[18px] font-bold tracking-[0.03em] border-2 border-[#959595] rounded-[8px] transition flex items-center justify-center cursor-pointer">
             Send
           </button>
