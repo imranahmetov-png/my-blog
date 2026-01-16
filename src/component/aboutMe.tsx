@@ -34,16 +34,16 @@ export default function UiAboutMe() {
     {
       circle: 'circle',
       name: ['Html'],
-      perсent: 0.3,
-      percentText: ['30%'],
+      perсent: 0.1,
+      percentText: ['10%'],
       img: HTML5,
       line: 'line',
     },
     {
       circle: 'circle',
       name: ['React'],
-      perсent: 0.5,
-      percentText: ['50%'],
+      perсent: 0.1,
+      percentText: ['10%'],
       img: React,
       line: 'line',
     },
@@ -173,3 +173,5 @@ export default function UiAboutMe() {
 //circumference * s.percent → видимая часть линии
 //circumference * (1 - s.percent) → невидимая часть линии
 //s.percent — это число от 0 до 1 (например, 0.1 = 10%, 0.5 = 50%)}
+
+//perсent

@@ -10,7 +10,7 @@ import UiEnd from './component/ui-end'
 function App() {
   return (
     <div className="bg-[#121212] min-w-screen min-h-screen pt-[57px] sm:min-w-screen overflow-x-hidden sm:min-h-screen">
-      <div className="flex flex-col justify-between items-center gap-[150px]">
+      <div className="flex flex-col justify-between items-center gap-[150px] overflow-hidden">
         {/* UI HERO SECTION */}
         <div
           id="Home"

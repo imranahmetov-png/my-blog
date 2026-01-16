@@ -53,11 +53,16 @@ export default function UiPortfolio() {
         <div className="max-w-[1445px] flex gap-[24px] flex-wrap justify-center items-center">
           {/* Карточка 1 */}
           {filteredProjects.map((project) => (
-            <div className="w-[415px] h-[473px] rounded-[16px] overflow-hidden">
+            <a
+              className="w-[415px] h-[473px] rounded-[16px] overflow-hidden"
+              href={project.img}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src={project.img}
                 alt="photoEX1"
-                className="w-[415px] h-[415px] object-cover"
+                className="w-[415px] h-[415px] object-cover "
               />
               <div className="h-[58px] px-[16px] bg-white/8 rounded-b-[20px] overflow-hidden flex flex-row justify-between items-center">
                 <p className="text-[16px] text-[#c6c6c6] font-bold ">
@@ -67,7 +72,7 @@ export default function UiPortfolio() {
                   {project.categories}
                 </p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
