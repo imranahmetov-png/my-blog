@@ -1,49 +1,49 @@
 export default function UIHeader() {
   return (
-    <header className="flex justify-between text-align:center items-center px-8 py-4">
-      <div className="relative text-transparent bg-clip-text bg-gradient-to-r from-[#FD6F00] to-[#E60026] text-[30px] text-align:left min-w-[81px] min-h-[39px] flex items-center pl-4 font-bold ">
+    <header className="flex w-full justify-center text-align:center items-center sm:px-8 sm:py-4">
+      <div className="text-transparent mr-[10px] sm:mr-[50px] bg-clip-text bg-linear-to-r from-[#FD6F00] to-[#E60026] text-lg sm:text-[30px] text-align:left flex items-center pl-4 font-bold ">
         Imran
       </div>
-      <nav className="flex gap-6 min-w-[653px] min-h-[24px] justify-center items-center">
+      <nav className="flex  gap-2 sm:gap-6 justify-center items-center">
         <a
           href="#Home"
-          className="relative text-[#FD6F00] transition text-[20px] text-center flex items-center pl-4 font-bold"
+          className="text-[#FD6F00] transition text-sm sm:text-[20px] text-center flex items-center font-bold"
         >
           Home
         </a>
         <a
           href="#Services"
-          className="relative text-[#959595] transition text-[20px] text-center flex items-center pl-4"
+          className="text-[#959595] transition text-sm sm:text-[20px] text-center flex items-center "
         >
           Services
         </a>
         <a
           href="#About me"
-          className="relative text-[#959595] transition text-[20px] text-center flex items-center pl-4"
+          className="text-[#959595] transition  text-sm sm:text-[20px] text-center flex items-center"
         >
           About me
         </a>
         <a
           href="#Portfolio"
-          className="relative text-[#959595] transition text-[20px] text-center flex items-center pl-4"
+          className="text-[#959595] transition  text-sm sm:text-[20px] text-center flex items-center"
         >
           Portfolio
         </a>
         <a
           href="#Contact me"
-          className="relative text-[#959595] transition text-[20px] text-center flex items-center pl-4"
+          className="text-[#959595] transition  text-sm sm:text-[20px] text-center flex items-center"
         >
           Contact me
         </a>
+        <a
+          href="https://discord.gg/2h8kgfT5"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#FD6F00] text-white px-5 py-2 rounded-lg font-bold hover:bg-[#ff8800] transition"
+        >
+          Hire Me
+        </a>
       </nav>
-      <a
-        href="https://discord.gg/2h8kgfT5"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-[#FD6F00] text-white px-5 py-2 rounded-lg font-bold hover:bg-[#ff8800] transition"
-      >
-        Hire Me
-      </a>
     </header>
   )
 }

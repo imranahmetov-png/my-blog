@@ -1,6 +1,5 @@
 import avatar from '@/assets/img/avatar.svg'
 import Instagram from '@/assets/img/Instagram.svg'
-import klyaksa from '@/assets/img/klyaksa.svg'
 import telegram from '@/assets/img/telegram.svg'
 import github from '@/assets/img/github.svg'
 import WhatsApp from '@/assets/img/WhatsApp.svg'
@@ -12,7 +11,7 @@ export default function UiHero() {
   const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)) // переводим в дни
 
   return (
-    <div className="flex justify-between items-center gap-[150px]">
+    <div className="flex flex-col sm:flex sm:flex-row justify-between items-center gap-[150px]">
       <div className="flex flex-col mr-auto justify-start items-start gap-[80px]">
         <div className="flex flex-col justify-start items-start gap-[61px]">
           <div className="flex flex-col justify-start items-start gap-[17px]">
@@ -119,11 +118,6 @@ export default function UiHero() {
           className="min-w-[550px] min-h-[550px] rounded-full object-cover"
         />
       </div>
-      <img
-        src={klyaksa}
-        alt="klyaksa"
-        className="absolute left-2 top-62 min-w-[600.65px] min-h-[516.74px]"
-      />
     </div>
   )
 }

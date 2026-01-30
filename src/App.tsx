@@ -9,7 +9,7 @@ import Footer from './component/footer'
 // tracking-[0.03em] ВЕЗДЕ РАСТАВЬ
 function App() {
   return (
-    <div className="bg-[#121212] min-w-screen min-h-screen pt-[57px] sm:min-w-screen overflow-x-hidden sm:min-h-screen">
+    <div className="bg-[#121212] sd:min-w-screen min-h-screen pt-[57px] sm:min-w-screen overflow-x-hidden sm:min-h-screen">
       <div className="flex flex-col justify-between items-center gap-[150px] overflow-hidden">
         {/* UI HERO SECTION */}
         <div
