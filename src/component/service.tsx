@@ -42,23 +42,27 @@ function UiService() {
   return (
     <div className="bg-[#121212] flex flex-col justify-start items-center gap-[80px] overflow-hidden">
       {/* Центрируем текст по горизонтали */}
-      <div className="w-[156px] h-[48px] flex justify-center items-center text-white text-[clamp(20px,4vw,40px)] leading-none font-bold">
+      <div className="flex justify-center items-center text-white text-[clamp(20px,4vw,40px)] leading-none font-bold">
         Services
       </div>
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
         {service.map((s, i) => (
           <div
             key={i}
-            className="bg-[#FFFFFF]/4 w-[420px] min-h-[340px] text-[#575757] flex flex-col rounded-xl py-[34px] px-[34px] gap-[34px]"
+            className="bg-[#FFFFFF]/4 w-full max-w-[183px] sm:min-w-[420px] sm:min-h-[340px] text-[#575757] flex flex-col rounded-xl py-[34px] px-[34px] gap-[16px]"
           >
             <div className="flex flex-col justify-center items-center gap-[16px]">
-              <img src={s.img} alt={s.title} className="w-[70px] h-[70px]" />
-              <div className="font-bold text-[24px] text-[#FD6F00] text-center">
+              <img
+                src={s.img}
+                alt={s.title}
+                className="w-[34px] h-[34px] sm:w-[70px] sm:h-[70px]"
+              />
+              <div className="font-bold text-[20px] sm:text-[24px] text-[#FD6F00] text-center">
                 {s.title}
               </div>
             </div>
 
-            <div className="text-center font-medium text-[20px] text-[#C6C6C6]text-[#575757] tracking-[0.03em]">
+            <div className="text-center font-medium text-[16px] sm:text-[20px] text-[#C6C6C6] tracking-[0.03em]">
               {s.description}
             </div>
           </div>
