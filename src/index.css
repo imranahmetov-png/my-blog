@@ -21,6 +21,7 @@
 /* Smooth scroll behavior */
 html {
   background-color: black;
+  background-image: url('/assets/img/klyaksa.svg');
   scroll-behavior: smooth;
   overflow-x: hidden;
 }

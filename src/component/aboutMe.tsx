@@ -81,8 +81,7 @@ export default function UiAboutMe() {
                 AUES College majoring in Information Systems Technology.
               </p>
               <p className="mb-4">
-                I am interested in Frontend development and actively studying I
-                am interested in Frontend development and actively studying
+                I am interested in Frontend development and actively studying
                 JavaScript, creating my first projects and continually expanding
                 my knowledge of web technologies.
               </p>
