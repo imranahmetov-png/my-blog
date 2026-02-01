@@ -66,8 +66,8 @@ export default function UiAboutMe() {
         </div>
       </div>
       <div className="flex flex-col justify-between items-center gap-25">
-        <div className="flex justify-between items-center gap-25">
-          <div className="w-[523px] h-[676px] bg-[#FFFFFF]/4 flex flex-col justify-between items-center px-[48px] pl-16 rounded-t-[261.5px] rounded-b-[12px] p-[32px] ">
+        <div className="flex flex-col sm:flex sm:flex-row justify-between items-center gap-25">
+          <div className="max-w-[365.64px] max-h-[564.88px] sm:min-w-[523px] sm:min-h-[676px] bg-[#FFFFFF]/4 flex flex-col justify-between items-center rounded-t-[261.5px] rounded-b-[12px] p-[32px] ">
             <img
               src={avatar}
               alt="avatar"
@@ -75,7 +75,7 @@ export default function UiAboutMe() {
             />
           </div>
           <div className="flex flex-col items-start">
-            <div className="w-[631px] h-[456px] text-[20px] text-[#959595] font-normal leading-[32px]">
+            <div className="max-w-[365.64px] sm:min-w-[631px] sm:min-h-[456px] text-[16px] sm:text-[20px] text-[#959595] font-normal leading-[32px]">
               <p className="mb-4">
                 Hi! My name is Imran, I am 17 years old, and I am a sophomore at
                 AUES College majoring in Information Systems Technology.
