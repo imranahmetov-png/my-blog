@@ -19,19 +19,19 @@ export default function UIHeader() {
         </a>
         <a
           href="#About me"
-          className="text-[#959595] transition  text-sm sm:text-[20px] text-center flex items-center"
+          className="text-[#959595] transition text-sm sm:text-[20px] text-center whitespace-nowrap flex items-center"
         >
           About me
         </a>
         <a
           href="#Portfolio"
-          className="text-[#959595] transition  text-sm sm:text-[20px] text-center flex items-center"
+          className="text-[#959595] transition text-sm sm:text-[20px] text-centerflex items-center"
         >
           Portfolio
         </a>
         <a
           href="#Contact me"
-          className="text-[#959595] transition  text-sm sm:text-[20px] text-center flex items-center"
+          className="text-[#959595] transition text-sm sm:text-[20px] text-center whitespace-nowrap flex items-center"
         >
           Contact me
         </a>
@@ -39,7 +39,7 @@ export default function UIHeader() {
           href="https://discord.gg/2h8kgfT5"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[#FD6F00] text-white px-5 py-2 rounded-lg font-bold hover:bg-[#ff8800] transition"
+          className="bg-[#FD6F00] text-white px-5 py-2 rounded-lg font-bold hover:bg-[#ff8800] whitespace-nowrap transition"
         >
           Hire Me
         </a>
