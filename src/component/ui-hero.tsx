@@ -93,7 +93,7 @@ export default function UiHero() {
           </div>
         </div>
         <div className="flex max-w-[380px] max-h-[99px] sm:min-w-[408px] sm:min-h-[99px] justify-center items-center gap-[15px] rounded-[8px] bg-[#ffffff]/4 p-[24px] text-center text-[20px] font-bold text-[#FFFFFF]">
-          <div className="flex flex-col items-center justify-center pr-[30px] border-r border-[#959595]">
+          <div className="flex flex-col items-center justify-center pr-[20px] border-r border-[#959595]">
             {/* число дней сверху */}
             <div className="flex-1 text-[20px] sm:text-[24px] font-bold text-[#FD6F00]">
               {diffDays} day
@@ -111,7 +111,7 @@ export default function UiHero() {
               specialist
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center pl-[15px]">
+          <div className="flex flex-col items-center justify-center pl-[10px]">
             <div className="flex-1 text-[20px] sm:text-[24px] font-bold text-[#FD6F00]">
               1
             </div>
