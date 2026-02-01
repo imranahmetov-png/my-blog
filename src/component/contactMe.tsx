@@ -16,46 +16,51 @@ export default function UiContactMe() {
       </div>
 
       <div className="h-[408px] flex flex-col gap-[30px]">
+        {/* Name and Email fields */}
         <div className="h-[54px] flex items-center gap-[30px]">
           <div className="w-[491px] h-[54px] bg-white/4 rounded-[8px] flex flex-row justify-left items-center px-[24px]">
+            {/* Name */}
             <span className="text-[16px] text-[#959595] tracking-[0.03em] font-medium mr-2">
               Name:
             </span>
             {/* Поле для ввода */}
             <input
               type="text"
-              className="flex-1 bg-transparent text-[16px] text-[#FFFFFF] placeholder-[#959595] focus:outline-none"
               placeholder=". . ."
+              className="flex-1 bg-transparent text-[16px] text-[#FFFFFF] placeholder-[#FFFFFF] focus:outline-none"
             />
           </div>
+
           <div className="w-[491px] h-[54px] bg-white/4 rounded-[8px] flex flex-row justify-left items-center px-[24px]">
+            {/* Email */}
             <span className="text-[16px] text-[#959595] tracking-[0.03em] font-medium mr-2">
               Email:
             </span>
             {/* Поле для ввода */}
             <input
               type="text"
-              className="flex-1 bg-transparent text-[16px] text-[#FFFFFF] placeholder-[#959595] focus:outline-none"
               placeholder=". . ."
+              className="flex-1 bg-transparent text-[16px] text-[#FFFFFF] placeholder-[#FFFFFF] focus:outline-none"
             />
           </div>
         </div>
 
+        {/* Phone Number and Service of Interest fields*/}
         <div className="flex items-center gap-[30px]">
           <div className="w-[491px] h-[54px] bg-white/4 rounded-[8px] flex flex-row justify-left items-center px-[24px]">
-            {/* Левый текст */}
+            {/* Phone Number */}
             <span className="text-[16px] text-[#959595] tracking-[0.03em] font-medium mr-2">
-              Phone Number
+              Phone Number:
             </span>
             {/* Поле для ввода */}
             <input
               type="text"
-              className="flex-1 bg-transparent text-[16px] text-[#FFFFFF] placeholder-[#959595] focus:outline-none"
               placeholder=". . ."
+              className="flex-1 bg-transparent text-[16px] text-[#FFFFFF] placeholder-[#FFFFFF] focus:outline-none"
             />
           </div>
           <div className="relative w-[491px]">
-            {/* Поле */}
+            {/* Service of Interest */}
             <div className="h-[54px] bg-white/4 rounded-[8px] flex items-center justify-between px-[24px]">
               {/* Левая часть: Service of Interest + выбранная услуга */}
               <div className="flex items-center gap-2">
@@ -63,7 +68,7 @@ export default function UiContactMe() {
                   Service of Interest:
                 </div>
                 <div className="text-[16px] text-[#FFFFFF] tracking-[0.03em] font-medium">
-                  {selectedService || '-'}
+                  {selectedService || '- - -'}
                 </div>
               </div>
               {/* Стрелка — всегда справа */}
@@ -83,7 +88,7 @@ export default function UiContactMe() {
             </div>
             {/* Dropdown */}
             {isOpen && (
-              <div className="absolute top-[60px] left-0 w-full bg-[#1A1A1A] rounded-[8px] overflow-hidden z-10">
+              <div className="absolute top-[60px] left-0 w-full bg-[#1A1A1A] text-[#FFFFFF] rounded-[8px] overflow-hidden z-10">
                 {['Web Design', 'UI / UX', 'Frontend Development'].map(
                   (item) => (
                     <div
@@ -92,7 +97,7 @@ export default function UiContactMe() {
                         setSelectedService(item)
                         setIsOpen(false)
                       }}
-                      className="px-[24px] py-[12px] cursor-pointer text-[#959595] hover:bg-white/5"
+                      className="px-[24px] py-[12px] cursor-pointer text-[#FFFFFF] hover:bg-white/5"
                     >
                       {item}
                     </div>
@@ -103,13 +108,14 @@ export default function UiContactMe() {
           </div>
         </div>
 
+        {/* Project Details field */}
         <div className="flex items-start gap-[30px]">
           <textarea
-            className="w-[491px] h-[162px] bg-white/4 rounded-[8px] text-[16px] text-[#959595] tracking-[0.03em] font-medium px-[24px] py-[14px] resize-none"
             placeholder="Project Details..."
+            className="w-[491px] h-[162px] bg-white/4 rounded-[8px] text-[16px] text-[#959595] tracking-[0.03em] font-medium px-[24px] py-[14px] resize-none"
           ></textarea>
         </div>
-
+        {/* Send button */}
         <div className="flex flex-col justify-center items-start">
           <button className="w-[127px] h-[48px] text-[#959595] text-[18px] font-bold tracking-[0.03em] border-2 border-[#959595] rounded-[8px] transition flex items-center justify-center cursor-pointer">
             Send
