@@ -9,28 +9,29 @@ export default function UiHero() {
   const today = new Date() // текущая дата
   const diffTime = today.getTime() - startDate.getTime() // разница в миллисекундах
   const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)) // переводим в дни
-
+  //
   return (
     <div className="flex flex-col sm:flex sm:flex-row justify-between items-center gap-[150px]">
-      <div className="flex flex-col mr-auto justify-start items-start gap-[80px]">
+      <div className="flex flex-col justify-start items-center sm:items-start gap-[80px] text-center sm:text-left">
         <div className="flex flex-col justify-start items-start gap-[61px]">
           <div className="flex flex-col justify-start items-start gap-[17px]">
             {/*frame 1*/}
             <div className="flex flex-col justify-start items-start gap-[24px]">
-              <div className="flex flex-col min-w-[219px] min-h-[73px] justify-start items-start text-left gap-[10px] flex-wrap">
-                <p className="text-[24px] text-left text-[#707070] typewriter-1">
+              <div className="flex flex-col justify-start items-center gap-[10px] w-full text-center sm:items-start">
+                <p className="text-[16px] sm:text-[24px] text-[#707070] typewriter-1">
                   Hi I am
                 </p>
-                <p className="text-[28px] text-[#707070] font-bold typewriter-2">
+                <p className="text-[20px] sm:text-[28px] text-[#707070] font-bold typewriter-2">
                   Akhmetov Imran
                 </p>
               </div>
-              <p className="bg-clip-text bg-gradient-to-r from-[#984300] via-[#FD6F00] to-[#CA5900] transition-colors text-[70px] text-center flex items-center font-bold text-transparent">
+
+              <p className="bg-clip-text bg-gradient-to-r from-[#984300] via-[#FD6F00] to-[#CA5900] transition-colors text-[50px] sm:text-[70px] text-center font-bold text-transparent flex items-center ">
                 IT-Specialist
               </p>
             </div>
             {/*frame 2*/}
-            <div className="flex items-end gap-[20px]">
+            <div className="flex justify-center sm:justify-start items-end gap-[20px] w-full">
               {/*Instagram*/}
               <a
                 href="https://www.instagram.com/imra_n_96?igsh=Zmw0NjJxM3k4cHRo&utm_source=qr"
@@ -79,39 +80,48 @@ export default function UiHero() {
               </a>
             </div>
           </div>
-          <div className="flex items-center gap-4 min-w-[389px] min-h-[48px]">
+          <div className="flex items-center gap-4 w-full justify-center sm:justify-start">
             <a
               href="https://discord.gg/2h8kgfT5"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <a href="https://discord.gg/2h8kgfT5"></a>
-              <div className="bg-gradient-to-r from-[#FD6F00] to-[#E46400] linear-gradient min-w-[156px] min-h-[48px] text-[20px] text-[#FFFFFF] text-center px-5 py-2 rounded-lg font-bold  cursor-pointer hover:opacity-80 transition relative z-50">
+              <div className="bg-gradient-to-r from-[#FD6F00] to-[#E46400] linear-gradient tracking-[0.03em] font-bold cursor-pointer hover:opacity-80 transition min-w-[156px] min-h-[48px] text-[20px] text-[#FFFFFF] text-center py-2 rounded-lg">
                 Hire me
               </div>
             </a>
           </div>
         </div>
-        <div className="flex min-w-[408px] min-h-[99px] justify-center items-center gap-[15px] rounded-[8px] bg-[#ffffff]/4 p-[24px] text-center text-[20px] font-bold text-[#FFFFFF]">
+        <div className="flex max-w-[380px] max-h-[99px] sm:min-w-[408px] sm:min-h-[99px] justify-center items-center gap-[15px] rounded-[8px] bg-[#ffffff]/4 p-[24px] text-center text-[20px] font-bold text-[#FFFFFF]">
           <div className="flex flex-col items-center justify-center pr-[30px] border-r border-[#959595]">
             {/* число дней сверху */}
-            <div className="flex-1 text-[24px] font-bold text-[#FD6F00]">
+            <div className="flex-1 text-[20px] sm:text-[24px] font-bold text-[#FD6F00]">
               {diffDays} day
             </div>
             {/* название снизу */}
-            <div className="flex-1 text-[20px] font-bold">Experiences</div>
+            <div className="flex-1 text-[16px] sm:text-[20px] font-bold">
+              Experiences
+            </div>
           </div>
-          <div className="flex flex-col items-center justify-center pl-[15px] pr-[30px] border-r border-[#959595]">
-            <div className="flex-1 text-[24px] font-bold text-[#FD6F00]">1</div>
-            <div className="flex-1 text-[20px] font-bold">Project done</div>
+          <div className="flex flex-col items-center justify-center pl-[15px] pr-[28px] border-r border-[#959595]">
+            <div className="flex-1 text-[20px] sm:text-[24px] font-bold">
+              Novice
+            </div>
+            <div className="flex-1 text-[16px] sm:text-[20px] font-bold">
+              specialist
+            </div>
           </div>
-          <div className="flex flex-col items-center justify-center pl-[15px] pr-[5px]">
-            <div className="flex-1 text-[24px] font-bold">Novice</div>
-            <div className="flex-1 text-[20px] font-bold">specialist</div>
+          <div className="flex flex-col items-center justify-center pl-[15px]">
+            <div className="flex-1 text-[20px] sm:text-[24px] font-bold text-[#FD6F00]">
+              1
+            </div>
+            <div className="flex-1 text-[16px] sm:text-[20px] font-bold whitespace-nowrap">
+              Project done
+            </div>
           </div>
         </div>
       </div>
-      <div className="rounded-full ml-auto min-w-[618px] min-h-[618px] bg-[#E46400] flex justify-center items-center">
+      <div className="rounded-full ml-auto max-w-[380.99px] max-h-[380.99px] sm:min-w-[618px] sm:min-h-[618px] bg-[#FFFFFF]/4 flex justify-center items-center">
         <img
           src={avatar}
           alt="avatar"
