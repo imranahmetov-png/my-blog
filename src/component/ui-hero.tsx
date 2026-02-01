@@ -121,7 +121,7 @@ export default function UiHero() {
           </div>
         </div>
       </div>
-      <div className="rounded-full ml-auto max-w-[380.99px] max-h-[380.99px] sm:min-w-[618px] sm:min-h-[618px] bg-[#FFFFFF]/4 flex justify-center items-center">
+      <div className="rounded-full max-w-[380.99px] max-h-[380.99px] sm:min-w-[618px] sm:min-h-[618px] bg-[#FFFFFF]/4 flex justify-center items-center">
         <img
           src={avatar}
           alt="avatar"
