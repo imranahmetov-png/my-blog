@@ -97,18 +97,16 @@ export default function UiAboutMe() {
           </div>
         </div>
         {/* Прогресс бары */}
-        <div className="flex justify-between items-start w-full">
+        <div className="flex flex-wrap justify-center sm:items-start gap-y-10 w-full">
           {CircleBar.map((s, index) => (
             <div
               key={index}
-              className="w-[200px] h-[227px] flex flex-col items-center gap-[24px]"
+              className="w-[175px] sm:w-[200px] flex flex-col items-center"
             >
               <div className="relative flex items-center justify-center">
                 <svg
-                  width="130"
-                  height="130"
+                  className="w-[90px] h-[90px] sm:w-[130px] sm:h-[130px] transform -rotate-90"
                   viewBox="0 0 100 100"
-                  className="transform rotate-[-90deg]"
                 >
                   {/* Характеристики круга */}
                   <circle
@@ -145,14 +143,14 @@ export default function UiAboutMe() {
                 </svg>
                 <img
                   src={s.img}
-                  className="min-w-[60.19px] min-h-[60.19px] absolute z-20 rounded-full object-cover"
+                  className="max-w-[40px] max-h-[40px] sm:min-w-[60px] sm:min-h-[60px] absolute z-20 rounded-full object-cover"
                 />
               </div>
               <div className="w-[77px] h-[73px] flex flex-col items-center gap-[8px]">
-                <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD6F00] to-[#E46400] text-[30px] font-bold">
+                <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD6F00] to-[#E46400] text-[24px] sm:text-[30px] font-bold">
                   {s.percentText}
                 </div>
-                <div className="text-[24px] text-[#959595] font-normal text-center ">
+                <div className="text-[16px] sm:text-[24px] text-[#959595] font-normal text-center ">
                   {s.name}
                 </div>
               </div>
