@@ -43,7 +43,7 @@ export default function UiContactMe() {
 
         {/* Phone Number and Service of Interest fields */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-[30px] w-full">
-          <div className="w-full sm:w-[491px] h-[54px] bg-white/4 rounded-[8px] flex items-center px-[24px]">
+          <div className="w-full sm:w-[491px] h-[54px] bg-white/4 rounded-[8px] flex items-center whitespace-nowrap px-[24px]">
             <span className="text-[16px] text-[#959595] tracking-[0.03em] font-medium mr-2">
               Phone Number:
             </span>
