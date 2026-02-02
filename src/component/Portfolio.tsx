@@ -26,7 +26,7 @@ export default function UiPortfolio() {
     <div className="flex flex-col justify-center items-center gap-[70px]">
       <div className="flex flex-col justify-center items-center">
         <div className="flex flex-col justify-between items-center gap-10">
-          <div className="text-[#FEFEFE] text-[40px] font-bold text-center flex flex-col justify-center items-center tracking-[0.03em]">
+          <div className="text-[#FEFEFE] text-[24px] sm:text-[40px] font-bold text-center flex flex-col justify-center items-center tracking-[0.03em]">
             Portfolio
           </div>
           <div className="flex flex-row justify-center items-center flex-wrap">
@@ -34,7 +34,7 @@ export default function UiPortfolio() {
               <button
                 key={tag}
                 onClick={() => setSelectedTag(tag)}
-                className={`px-4 py-2 rounded-lg transition-all mx-2 mb-4
+                className={`px-5 py-[10px] sm:px-10 sm:py-[14px] rounded-lg transition-all mx-2 mb-4
                   ${
                     tag === 'All'
                       ? 'bg-gradient-to-r from-[#FD6F00] to-[#E46400] text-[#FFFFFF] font-bold hover:bg-[#ff8800] transition cursor-pointer'
@@ -54,7 +54,7 @@ export default function UiPortfolio() {
           {/* Карточка 1 */}
           {filteredProjects.map((project) => (
             <a
-              className="w-[415px] h-[473px] rounded-[16px] overflow-hidden"
+              className="max-w-[284px] max-h-[284px] sm:min-w-[415px] sm:min-h-[473px] rounded-[16px] overflow-hidden"
               href={project.img}
               target="_blank"
               rel="noopener noreferrer"
@@ -62,7 +62,7 @@ export default function UiPortfolio() {
               <img
                 src={project.img}
                 alt="photoEX1"
-                className="w-[415px] h-[415px] object-cover "
+                className="max-w-[284px] max-h-[284px] sm:min-w-[415px] sm:min-h-[473px] object-cover "
               />
               <div className="h-[58px] px-[16px] bg-white/8 rounded-b-[20px] overflow-hidden flex flex-row justify-between items-center">
                 <p className="text-[16px] text-[#c6c6c6] font-bold ">
