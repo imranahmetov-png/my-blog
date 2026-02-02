@@ -6,11 +6,11 @@ export default function UiContactMe() {
 
   return (
     <div className="flex flex-col justify-start items-center gap-[50px]">
-      <div className="w-[547px] h-[98px] flex flex-col gap-[18px]">
-        <div className="text-[#FEFEFE] text-[40px] tracking-[0.03em] font-bold whitespace-nowrap flex items-center justify-center">
+      <div className="flex flex-col gap-[18px]">
+        <div className="text-[#FEFEFE] text-[24px] sm:text-[40px] tracking-[0.03em] font-bold whitespace-nowrap flex items-center justify-center">
           Contact Me
         </div>
-        <div className="text-[18px] text-[#707070] tracking-[0.03em] font-medium flex items-center justify-center">
+        <div className="text-[16px] sm:text-[18px] text-[#707070] tracking-[0.03em] font-medium flex items-center justify-center text-center px-4 max-w-[382px] mx-auto">
           Cultivating Connections: Reach Out and Connect with Me
         </div>
       </div>
