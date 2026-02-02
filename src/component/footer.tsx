@@ -98,7 +98,7 @@ export default function UiEnd() {
         </a>
       </div>
 
-      <div className="flex flex-row justify-center items-center gap-10">
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-10">
         <div className="flex flex-row items-center gap-[14px]">
           <img
             src={mail}

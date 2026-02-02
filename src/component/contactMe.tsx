@@ -104,7 +104,7 @@ export default function UiContactMe() {
         <div className="w-full h-[162px] sm:min-w-[491px] sm:min-h-[162px]">
           <textarea
             placeholder="Project Details..."
-            className="w-full h-[162px] bg-white/4 rounded-[8px] text-[16px] text-[#959595] tracking-[0.03em] font-medium px-[24px] py-[14px] resize-none"
+            className="w-[386px] h-[162px] sm:min-w-[491px] sm:min-h-[162px] bg-white/4 rounded-[8px] text-[16px] text-[#959595] tracking-[0.03em] font-medium px-[24px] py-[14px] resize-none"
           ></textarea>
         </div>
 
