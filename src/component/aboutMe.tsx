@@ -97,7 +97,7 @@ export default function UiAboutMe() {
           </div>
         </div>
         {/* Прогресс бары */}
-        <div className="flex flex-wrap justify-center sm:items-start gap-y-10 w-full">
+        <div className="flex flex-wrap justify-between sm:items-start gap-y-10 w-full">
           {CircleBar.map((s, index) => (
             <div
               key={index}
