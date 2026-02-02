@@ -7,41 +7,46 @@ import phone from '@/assets/img/phone.svg'
 
 export default function UiEnd() {
   return (
-    <div className="flex flex-col justify-center items-center gap-[50px] px-[80px]">
+    <div className="flex flex-col justify-center items-center gap-[30px] sm:gap-[50px] px-[80px]">
       <p className="relative text-transparent bg-clip-text bg-gradient-to-r from-[#FD6F00] to-[#E60026] text-[30px] font-bold tracking-[0.03em] flex items-center pt-[40px]">
         Imran
       </p>
-      <nav className="flex gap-[60px] justify-center items-center">
+      <nav className="flex flex-wrap gap-6 sm:gap-15 justify-center items-center">
+        {/* Первая строка: Home, Services, About me */}
         <a
           href="#Home"
-          className="relative text-[#959595] tracking-[0.03em] font-medium transition text-[20px] text-center flex items-center pl-4"
+          className="text-[#959595] tracking-[0.03em] font-medium text-[16px] sm:text-[20px] flex items-center pl-4"
         >
           Home
         </a>
         <a
           href="#Services"
-          className="relative text-[#959595] tracking-[0.03em] font-medium transition text-[20px] text-center flex items-center pl-4"
+          className="text-[#959595] tracking-[0.03em] font-medium text-[16px] sm:text-[20px] flex items-center pl-4"
         >
           Services
         </a>
         <a
           href="#About me"
-          className="relative text-[#959595] tracking-[0.03em] font-medium transition text-[20px] text-center flex items-center pl-4"
+          className="text-[#959595] tracking-[0.03em] font-medium text-[16px] sm:text-[20px] flex items-center pl-4 whitespace-nowrap"
         >
           About me
         </a>
-        <a
-          href="#Portfolio"
-          className="relative text-[#959595] tracking-[0.03em] font-medium transition text-[20px] text-center flex items-center pl-4"
-        >
-          Portfolio
-        </a>
-        <a
-          href="#Contact me"
-          className="relative text-[#959595] tracking-[0.03em] font-medium transition text-[20px] text-center flex items-center pl-4"
-        >
-          Contact me
-        </a>
+
+        {/* Вторая строка на мобильных: Portfolio + Contact me */}
+        <div className="flex w-full justify-center gap-6 sm:w-auto sm:flex-none">
+          <a
+            href="#Portfolio"
+            className="text-[#959595] tracking-[0.03em] font-medium text-[16px] sm:text-[20px] flex items-center pl-4"
+          >
+            Portfolio
+          </a>
+          <a
+            href="#Contact me"
+            className="text-[#959595] tracking-[0.03em] font-medium text-[16px] sm:text-[20px] flex items-center pl-4"
+          >
+            Contact me
+          </a>
+        </div>
       </nav>
 
       <div className="flex items-end gap-[20px]">
