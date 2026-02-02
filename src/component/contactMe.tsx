@@ -5,7 +5,7 @@ export default function UiContactMe() {
   const [selectedService, setSelectedService] = useState('')
 
   return (
-    <div className="flex flex-col justify-start items-center gap-[50px]">
+    <div className="flex flex-col justify-start items-center gap-[40px] sm:gap-[50px]">
       <div className="flex flex-col gap-[18px]">
         <div className="text-[#FEFEFE] text-[24px] sm:text-[40px] tracking-[0.03em] font-bold whitespace-nowrap flex items-center justify-center">
           Contact Me
@@ -15,15 +15,13 @@ export default function UiContactMe() {
         </div>
       </div>
 
-      <div className="h-[408px] flex flex-col gap-[30px]">
+      <div className="flex flex-col gap-6 sm:flex-wrap sm:gap-[30px]">
         {/* Name and Email fields */}
-        <div className="h-[54px] flex items-center gap-[30px]">
-          <div className="w-[491px] h-[54px] bg-white/4 rounded-[8px] flex flex-row justify-left items-center px-[24px]">
-            {/* Name */}
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-[30px] w-full">
+          <div className="w-full sm:w-[491px] h-[54px] bg-white/4 rounded-[8px] flex items-center px-[24px]">
             <span className="text-[16px] text-[#959595] tracking-[0.03em] font-medium mr-2">
               Name:
             </span>
-            {/* Поле для ввода */}
             <input
               type="text"
               placeholder=". . ."
@@ -31,12 +29,10 @@ export default function UiContactMe() {
             />
           </div>
 
-          <div className="w-[491px] h-[54px] bg-white/4 rounded-[8px] flex flex-row justify-left items-center px-[24px]">
-            {/* Email */}
+          <div className="w-full sm:w-[491px] h-[54px] bg-white/4 rounded-[8px] flex items-center px-[24px]">
             <span className="text-[16px] text-[#959595] tracking-[0.03em] font-medium mr-2">
               Email:
             </span>
-            {/* Поле для ввода */}
             <input
               type="text"
               placeholder=". . ."
@@ -45,24 +41,21 @@ export default function UiContactMe() {
           </div>
         </div>
 
-        {/* Phone Number and Service of Interest fields*/}
-        <div className="flex items-center gap-[30px]">
-          <div className="w-[491px] h-[54px] bg-white/4 rounded-[8px] flex flex-row justify-left items-center px-[24px]">
-            {/* Phone Number */}
+        {/* Phone Number and Service of Interest fields */}
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-[30px] w-full">
+          <div className="w-full sm:w-[491px] h-[54px] bg-white/4 rounded-[8px] flex items-center px-[24px]">
             <span className="text-[16px] text-[#959595] tracking-[0.03em] font-medium mr-2">
               Phone Number:
             </span>
-            {/* Поле для ввода */}
             <input
               type="text"
               placeholder=". . ."
               className="flex-1 bg-transparent text-[16px] text-[#FFFFFF] placeholder-[#FFFFFF] focus:outline-none"
             />
           </div>
-          <div className="relative w-[491px]">
-            {/* Service of Interest */}
-            <div className="h-[54px] bg-white/4 rounded-[8px] flex items-center justify-between px-[24px]">
-              {/* Левая часть: Service of Interest + выбранная услуга */}
+
+          <div className="relative w-full sm:w-[491px]">
+            <div className="w-full h-[54px] bg-white/4 rounded-[8px] flex items-center justify-between px-[24px]">
               <div className="flex items-center gap-2">
                 <div className="text-[16px] text-[#959595] tracking-[0.03em] font-medium">
                   Service of Interest:
@@ -71,7 +64,6 @@ export default function UiContactMe() {
                   {selectedService || '- - -'}
                 </div>
               </div>
-              {/* Стрелка — всегда справа */}
               <button
                 type="button"
                 onClick={() => setIsOpen((prev) => !prev)}
@@ -86,7 +78,7 @@ export default function UiContactMe() {
                 </span>
               </button>
             </div>
-            {/* Dropdown */}
+
             {isOpen && (
               <div className="absolute top-[60px] left-0 w-full bg-[#1A1A1A] text-[#FFFFFF] rounded-[8px] overflow-hidden z-10">
                 {['Web Design', 'UI / UX', 'Frontend Development'].map(
@@ -109,15 +101,16 @@ export default function UiContactMe() {
         </div>
 
         {/* Project Details field */}
-        <div className="flex items-start gap-[30px]">
+        <div className="w-full h-[162px] sm:min-w-[491px] sm:min-h-[162px]">
           <textarea
             placeholder="Project Details..."
-            className="w-[491px] h-[162px] bg-white/4 rounded-[8px] text-[16px] text-[#959595] tracking-[0.03em] font-medium px-[24px] py-[14px] resize-none"
+            className="w-full h-[162px] bg-white/4 rounded-[8px] text-[16px] text-[#959595] tracking-[0.03em] font-medium px-[24px] py-[14px] resize-none"
           ></textarea>
         </div>
+
         {/* Send button */}
-        <div className="flex flex-col justify-center items-start">
-          <button className="w-[127px] h-[48px] text-[#959595] text-[18px] font-bold tracking-[0.03em] border-2 border-[#959595] rounded-[8px] transition flex items-center justify-center cursor-pointer">
+        <div className="flex justify-center sm:justify-start w-full">
+          <button className="w-[85px] h-[35px] sm:w-[127px] sm:h-[48px] text-[#959595] text-center text-[16px] sm:text-[18px] font-bold tracking-[0.03em] border-2 border-[#959595] rounded-lg transition flex items-center justify-center cursor-pointer">
             Send
           </button>
         </div>
