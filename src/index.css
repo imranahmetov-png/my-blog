@@ -20,8 +20,6 @@
 
 /* Smooth scroll behavior */
 html {
-  background-color: black;
-  background-image: url('/assets/img/klyaksa.svg');
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -83,3 +81,14 @@ html {
   /*
   typing 0s,
   blink 0.7s; /* скрытие курсора */
+
+html[data-theme='dark'] {
+  background: #111;
+  color: white;
+  background-image: url('/assets/img/klyaksa.svg');
+}
+
+html[data-theme='light'] {
+  background: white;
+  color: black;
+}

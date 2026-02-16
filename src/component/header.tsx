@@ -1,4 +1,7 @@
+import { useTheme } from '@/context/theme/useTheme'
+
 export default function UIHeader() {
+  const { theme, switchTheme } = useTheme()
   return (
     <header className="flex w-full justify-center text-align:center items-center sm:px-8 sm:py-4">
       <div className="text-transparent mr-[10px] sm:mr-[50px] bg-clip-text bg-linear-to-r from-[#FD6F00] to-[#E60026] text-lg sm:text-[30px] text-align:left flex items-center pl-4 font-bold ">
@@ -35,6 +38,13 @@ export default function UIHeader() {
         >
           Contact me
         </a>
+        <button
+          onClick={() => switchTheme(theme === 'light' ? 'dark' : 'light')}
+          type="button"
+          className="px-4 py-2 rounded-lg cursor-pointer bg-gray-200 text-gray-700 font-semibold hover:bg-gray-300 transition-colors"
+        >
+          {theme === 'dark' ? '🌙' : '☀️'}
+        </button>
         <a
           href="https://discord.gg/2h8kgfT5"
           target="_blank"

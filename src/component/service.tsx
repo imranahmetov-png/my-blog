@@ -40,7 +40,7 @@ function UiService() {
   ]
 
   return (
-    <div className="bg-[#121212] flex flex-col justify-start items-center gap-[80px] overflow-hidden">
+    <div className="flex flex-col justify-start items-center gap-[80px] overflow-hidden">
       {/* Центрируем текст по горизонтали */}
       <div className="flex justify-center items-center text-white text-[clamp(20px,4vw,40px)] leading-none font-bold">
         Services
