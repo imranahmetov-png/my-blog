@@ -1,18 +1,89 @@
 import { useState } from 'react'
+import type { ChangeEvent, FormEvent } from 'react'
+
+interface FormData {
+  name: string
+  email: string
+  phone: string
+  service: string
+  message: string
+  subject: string // Поле-ловушка (Honeypot)
+}
 
 export default function UiContactMe() {
   const [isOpen, setIsOpen] = useState(false)
-  const [selectedService, setSelectedService] = useState('')
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    phone: '',
+    service: '',
+    message: '',
+    subject: '',
+  })
+  const [status, setStatus] = useState<
+    'idle' | 'loading' | 'success' | 'error'
+  >('idle')
+
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    // e.target.name должен совпадать с ключами в FormData
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }))
+  }
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault()
+    // если скрытое поле заполнено, значит это бот
+    if (formData.subject) return
+    setStatus('loading')
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: 'fc3b2ff7-35fa-481e-8ddf-0b463aaf1e14',
+          ...formData,
+        }),
+      })
+
+      if (response.ok) {
+        setStatus('success')
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: '',
+          message: '',
+          subject: '',
+        })
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
+  }
 
   return (
-    <div className="flex flex-col justify-start items-center gap-[40px] sm:gap-[50px]">
+    <form
+      onSubmit={handleSubmit}
+      className="flex flex-col justify-start items-center gap-[40px] sm:gap-[50px]"
+    >
       <div className="flex flex-col gap-[18px]">
+        {/* Скрытое поле для защиты от спама */}
+        <input
+          type="text"
+          name="subject"
+          value={formData.subject}
+          onChange={handleChange}
+          className="hidden"
+        />
         <div className="text-[#FEFEFE] text-[24px] sm:text-[40px] tracking-[0.03em] font-bold whitespace-nowrap flex items-center justify-center">
           Contact Me
         </div>
-        <div className="text-[16px] sm:text-[18px] text-[#707070] tracking-[0.03em] font-medium flex items-center justify-center text-center px-4 max-w-[382px] mx-auto">
+        <p className="text-[16px] sm:text-[18px] text-[#707070] tracking-[0.03em] font-medium flex items-center justify-center text-center px-4 max-w-[382px] mx-auto">
           Cultivating Connections: Reach Out and Connect with Me
-        </div>
+        </p>
       </div>
 
       <div className="flex flex-col gap-6 sm:flex-wrap sm:gap-[30px]">
@@ -24,6 +95,10 @@ export default function UiContactMe() {
             </span>
             <input
               type="text"
+              name="name" // Обязательно!
+              value={formData.name} // Привязка к стейту
+              onChange={handleChange} // Слушатель изменений
+              required
               placeholder=". . ."
               className="flex-1 bg-transparent text-[16px] text-[#FFFFFF] placeholder-[#FFFFFF] focus:outline-none"
             />
@@ -34,7 +109,11 @@ export default function UiContactMe() {
               Email:
             </span>
             <input
-              type="text"
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
               placeholder=". . ."
               className="flex-1 bg-transparent text-[16px] text-[#FFFFFF] placeholder-[#FFFFFF] focus:outline-none"
             />
@@ -49,6 +128,9 @@ export default function UiContactMe() {
             </span>
             <input
               type="text"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
               placeholder=". . ."
               className="flex-1 bg-transparent text-[16px] text-[#FFFFFF] placeholder-[#FFFFFF] focus:outline-none"
             />
@@ -57,25 +139,19 @@ export default function UiContactMe() {
           <div className="relative w-full sm:w-[491px]">
             <div className="w-full h-[54px] bg-white/4 rounded-[8px] flex items-center justify-between px-[24px]">
               <div className="flex items-center gap-2">
-                <div className="text-[16px] text-[#959595] tracking-[0.03em] font-medium">
+                <span className="text-[16px] text-[#959595] tracking-[0.03em] font-medium">
                   Service of Interest:
-                </div>
-                <div className="text-[16px] text-[#FFFFFF] tracking-[0.03em] font-medium">
-                  {selectedService || '- - -'}
-                </div>
+                </span>
+                <span className="text-[16px] text-[#FFFFFF] tracking-[0.03em] font-medium">
+                  {formData.service || '- - -'}
+                </span>
               </div>
               <button
                 type="button"
-                onClick={() => setIsOpen((prev) => !prev)}
-                className="text-[#959595] cursor-pointer transition-transform"
+                onClick={() => setIsOpen(!isOpen)}
+                className={`text-[#959595] curcor-poiter transition-transform ${isOpen ? 'rotate-180' : ''}`}
               >
-                <span
-                  className={
-                    isOpen ? 'rotate-180 inline-block' : 'inline-block'
-                  }
-                >
-                  ▼
-                </span>
+                ▼
               </button>
             </div>
 
@@ -86,7 +162,7 @@ export default function UiContactMe() {
                     <div
                       key={item}
                       onClick={() => {
-                        setSelectedService(item)
+                        setFormData((prev) => ({ ...prev, service: item }))
                         setIsOpen(false)
                       }}
                       className="px-[24px] py-[12px] cursor-pointer text-[#FFFFFF] hover:bg-white/5"
@@ -103,6 +179,9 @@ export default function UiContactMe() {
         {/* Project Details field */}
         <div className="w-full h-[162px] sm:min-w-[491px] sm:min-h-[162px]">
           <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
             placeholder="Project Details..."
             className="w-[386px] h-[162px] sm:min-w-[491px] sm:min-h-[162px] bg-white/4 rounded-[8px] text-[16px] text-[#959595] tracking-[0.03em] font-medium px-[24px] py-[14px] resize-none"
           ></textarea>
@@ -110,12 +189,23 @@ export default function UiContactMe() {
 
         {/* Send button */}
         <div className="flex justify-center sm:justify-start w-full">
-          <button className="w-[85px] h-[35px] sm:w-[127px] sm:h-[48px] text-[#959595] text-center text-[16px] sm:text-[18px] font-bold tracking-[0.03em] border-2 border-[#959595] rounded-lg transition flex items-center justify-center cursor-pointer">
+          <button
+            type="submit"
+            disabled={status === 'loading'}
+            className="w-[85px] h-[35px] sm:w-[127px] sm:h-[48px] text-[#959595] text-center text-[16px] sm:text-[18px] font-bold tracking-[0.03em] border-2 border-[#959595] rounded-lg transition flex items-center justify-center cursor-pointer"
+          >
             Send
           </button>
         </div>
+        {/* Уведомления о статусе */}
+        {status === 'success' && (
+          <p className="text-green-500">Message sent successfully!</p>
+        )}
+        {status === 'error' && (
+          <p className="text-red-500">Something went wrong. Try again.</p>
+        )}
       </div>
-    </div>
+    </form>
   )
 }
 //       Service of Interest — выбранная услуга(работает вместе с дропдауном)
