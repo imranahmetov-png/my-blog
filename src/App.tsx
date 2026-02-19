@@ -9,12 +9,12 @@ import Footer from './component/footer'
 // tracking-[0.03em] ВЕЗДЕ РАСТАВЬ
 function App() {
   return (
-    <div className="sd:min-w-screen min-h-screen pt-[57px] sm:min-w-screen overflow-x-hidden sm:min-h-screen">
-      <div className="flex flex-col justify-between items-center gap-[150px] overflow-hidden">
+    <div className="sd:min-w-screen min-h-screen pt-14.25 sm:min-w-screen overflow-x-hidden sm:min-h-screen">
+      <div className="flex flex-col justify-between items-center gap-37.5 overflow-hidden">
         {/* UI HERO SECTION */}
         <div
           id="Home"
-          className="flex flex-col w-full justify-between items-center gap-[150px] p-4"
+          className="flex flex-col w-full justify-between items-center gap-37.5 p-4"
         >
           <UIHeader />
           <UiHero />
@@ -22,33 +22,33 @@ function App() {
         {/*Services Section */}
         <div
           id="Services"
-          className="flex flex-col justify-start items-center gap-[150px] p-4"
+          className="flex flex-col justify-start items-center gap-37.5 p-4"
         >
           <UiFrame />
         </div>
         {/* About Me Section */}
         <div
           id="About me"
-          className="flex flex-col justify-start items-center gap-[150px] p-4"
+          className="flex flex-col justify-start items-center gap-37.5 p-4"
         >
           <UiAboutMe />
         </div>
         {/* Portfolio Section */}
         <div
           id="Portfolio"
-          className="flex flex-col justify-center items-center gap-[150px] p-4"
+          className="flex flex-col justify-center items-center gap-37.5 p-4"
         >
           <UiPortfolio />
         </div>
         {/* Contact Me Section */}
         <div
           id="Contact me"
-          className="flex flex-col justify-center items-center gap-[150px] p-4"
+          className="flex flex-col justify-center items-center gap-37.5 p-4"
         >
           <UiContactMe />
         </div>
         {/* UI END SECTION */}
-        <div className="flex flex-col justify-start items-center gap-[150px] w-full bg-[#FFFFFF]/4 p-4">
+        <div className="flex flex-col justify-start items-center gap-37.5 w-full bg-[#FFFFFF]/4 p-4">
           <Footer />
         </div>
       </div>

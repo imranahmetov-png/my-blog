@@ -104,12 +104,12 @@ export default function UiHero() {
             </div>
           </div>
           <div className="flex flex-col items-center justify-center pl-[10px] pr-[28px] border-r border-[#959595]">
-            <div className="flex-1 text-[20px] sm:text-[24px] font-bold">
+            <p className="flex-1 text-[20px] sm:text-[24px] font-bold">
               Novice
-            </div>
-            <div className="flex-1 text-[16px] sm:text-[20px] font-bold">
+            </p>
+            <p className="flex-1 text-[16px] sm:text-[20px] font-bold">
               specialist
-            </div>
+            </p>
           </div>
           <div className="flex flex-col items-center justify-center pl-[10px]">
             <div className="flex-1 text-[20px] sm:text-[24px] font-bold text-[#FD6F00]">

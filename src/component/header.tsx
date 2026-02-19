@@ -7,7 +7,7 @@ export default function UIHeader() {
       <div className="text-transparent mr-[10px] sm:mr-[50px] bg-clip-text bg-linear-to-r from-[#FD6F00] to-[#E60026] text-lg sm:text-[30px] text-align:left flex items-center pl-4 font-bold ">
         Imran
       </div>
-      <nav className="flex  gap-2 sm:gap-6 justify-center items-center">
+      <nav className="flex gap-2 sm:gap-6 justify-center items-center">
         <a
           href="#Home"
           className="text-[#FD6F00] transition text-sm sm:text-[20px] text-center flex items-center font-bold"
