@@ -41,7 +41,7 @@ export default function UiContactMe() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          access_key: 'fc3b2ff7-35fa-481e-8ddf-0b463aaf1e14',
+          access_key: import.meta.env.VITE_ACCESS_WEB3_KEY,
           ...formData,
         }),
       })
