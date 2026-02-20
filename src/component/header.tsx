@@ -1,4 +1,6 @@
 import { useTheme } from '@/context/theme/useTheme'
+import ThemeD from '../assets/img/themeDark.svg'
+import ThemeL from '../assets/img/themeLight.svg'
 
 export default function UIHeader() {
   const { theme, switchTheme } = useTheme()
@@ -40,16 +42,21 @@ export default function UIHeader() {
         </a>
         <button
           onClick={() => switchTheme(theme === 'light' ? 'dark' : 'light')}
-          type="button"
-          className="px-4 py-2 rounded-lg cursor-pointer bg-gray-200 text-gray-700 font-semibold hover:bg-gray-300 transition-colors"
+          className="w-10 h-10 flex items-center justify-center cursor-pointer"
         >
-          {theme === 'dark' ? '🌙' : '☀️'}
+          <img
+            src={theme === 'light' ? ThemeD : ThemeL}
+            alt={theme === 'light' ? 'Луна' : 'Солнце'}
+            className={`w-7 h-7 filter transition duration-300
+          ${theme === 'light' ? 'hover:brightness-200' : 'hover:brightness-165'}
+        `}
+          />
         </button>
         <a
           href="https://discord.gg/2h8kgfT5"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[#FD6F00] text-white px-5 py-2 rounded-lg font-bold hover:bg-[#ff8800] whitespace-nowrap transition"
+          className="bg-gradient-to-r from-[#FD6F00] to-[#E46400] linear-gradient text-white px-5 py-2 rounded-lg font-bold whitespace-nowrap transition"
         >
           Hire Me
         </a>
