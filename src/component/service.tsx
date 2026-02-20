@@ -40,16 +40,16 @@ function UiService() {
   ]
 
   return (
-    <div className="flex flex-col justify-start items-center gap-[80px] overflow-hidden">
+    <div className="flex flex-col justify-start items-center gap-20 overflow-hidden">
       {/* Центрируем текст по горизонтали */}
-      <div className="flex justify-center items-center text-white text-[clamp(20px,4vw,40px)] leading-none font-bold">
+      <div className="flex justify-center items-center text-white text-[24px] sm:text-[40px] leading-none font-bold tracking-[0.03em]">
         Services
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
         {service.map((s, i) => (
           <div
             key={i}
-            className="bg-[#FFFFFF]/4 w-full max-w-[183px] sm:min-w-[420px] sm:min-h-[340px] text-[#575757] flex flex-col rounded-xl py-[34px] px-[34px] gap-[16px]"
+            className="bg-[#FFFFFF]/4 w-full max-w-[183px] sm:min-w-[420px] sm:min-h-[340px] text-[#575757] flex flex-col rounded-xl py-[34px] px-[34px] gap-[16px] tracking-[0.03em]"
           >
             <div className="flex flex-col justify-center items-center gap-[16px]">
               <img
@@ -57,7 +57,7 @@ function UiService() {
                 alt={s.title}
                 className="w-[34px] h-[34px] sm:w-[70px] sm:h-[70px]"
               />
-              <div className="font-bold text-[20px] sm:text-[24px] text-[#FD6F00] text-center">
+              <div className="font-bold text-[20px] sm:text-[24px] text-[#FD6F00] text-center tracking-[0.03em]">
                 {s.title}
               </div>
             </div>

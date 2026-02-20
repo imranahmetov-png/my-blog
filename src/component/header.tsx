@@ -7,7 +7,7 @@ export default function UIHeader() {
       <div className="text-transparent mr-[10px] sm:mr-[50px] bg-clip-text bg-linear-to-r from-[#FD6F00] to-[#E60026] text-lg sm:text-[30px] text-align:left flex items-center pl-4 font-bold ">
         Imran
       </div>
-      <nav className="flex gap-2 sm:gap-6 justify-center items-center">
+      <nav className="flex gap-2 sm:gap-6 justify-center items-center tracking-[0.03em]">
         <a
           href="#Home"
           className="text-[#FD6F00] transition text-sm sm:text-[20px] text-center flex items-center font-bold"
@@ -39,7 +39,7 @@ export default function UIHeader() {
           Contact me
         </a>
         <button
-          onClick={() => switchTheme(theme === 'light' ? 'dark' : 'light')}
+          onClick={() => switchTheme(theme === 'dark' ? 'dark' : 'light')}
           type="button"
           className="px-4 py-2 rounded-lg cursor-pointer bg-gray-200 text-gray-700 font-semibold hover:bg-gray-300 transition-colors"
         >

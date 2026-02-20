@@ -54,13 +54,13 @@ export default function UiAboutMe() {
     <div className="flex flex-col justify-start items-center">
       <div className="w-[188px] h-[98px] flex flex-col">
         <div className="h-[48px] flex items-center justify-center">
-          <p className="text-[#FEFEFE] text-[40px] font-bold leading-none whitespace-nowrap">
+          <p className="text-[#FEFEFE] text-[40px] font-bold leading-none whitespace-nowrap tracking-[0.03em]">
             About Me
           </p>
         </div>
 
         <div className="flex items-center justify-center px-3">
-          <p className="text-[#707070] text-[16px] text-center leading-none whitespace-nowrap">
+          <p className="text-[#707070] text-[16px] text-center leading-none whitespace-nowrap tracking-[0.03em]">
             Info about me
           </p>
         </div>
@@ -75,7 +75,7 @@ export default function UiAboutMe() {
             />
           </div>
           <div className="flex flex-col items-start">
-            <div className="max-w-[365.64px] sm:min-w-[631px] sm:min-h-[456px] text-[16px] sm:text-[20px] text-[#959595] font-normal leading-[32px]">
+            <div className="max-w-[365.64px] sm:min-w-[631px] sm:min-h-[456px] text-[16px] sm:text-[20px] text-[#959595] font-normal leading-8 tracking-[0.03em]">
               <p className="mb-4">
                 Hi! My name is Imran, I am 17 years old, and I am a sophomore at
                 AUES College majoring in Information Systems Technology.
@@ -150,7 +150,7 @@ export default function UiAboutMe() {
                 <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD6F00] to-[#E46400] text-[24px] sm:text-[30px] font-bold">
                   {s.percentText}
                 </div>
-                <div className="text-[16px] sm:text-[24px] text-[#959595] font-normal text-center ">
+                <div className="text-[16px] sm:text-[24px] text-[#959595] font-normal text-center tracking-[0.03em]">
                   {s.name}
                 </div>
               </div>

@@ -67,9 +67,9 @@ export default function UiContactMe() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col justify-start items-center gap-[40px] sm:gap-[50px]"
+      className="flex flex-col justify-start items-center gap-10 sm:gap-12,5"
     >
-      <div className="flex flex-col gap-[18px]">
+      <div className="flex flex-col gap-4,5">
         {/* Скрытое поле для защиты от спама */}
         <input
           type="text"
@@ -81,21 +81,21 @@ export default function UiContactMe() {
         <div className="text-[#FEFEFE] text-[24px] sm:text-[40px] tracking-[0.03em] font-bold whitespace-nowrap flex items-center justify-center">
           Contact Me
         </div>
-        <p className="text-[16px] sm:text-[18px] text-[#707070] tracking-[0.03em] font-medium flex items-center justify-center text-center px-4 max-w-[382px] mx-auto">
+        <p className="text-[16px] sm:text-[18px] text-[#707070] tracking-[0.03em] font-medium flex items-center justify-center text-center px-4 max-w-95,5 mx-auto">
           Cultivating Connections: Reach Out and Connect with Me
         </p>
       </div>
 
-      <div className="flex flex-col gap-6 sm:flex-wrap sm:gap-[30px]">
+      <div className="flex flex-col gap-6 sm:flex-wrap sm:gap-7,5">
         {/* Name and Email fields */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-[30px] w-full">
-          <div className="w-full sm:w-[491px] h-[54px] bg-white/4 rounded-[8px] flex items-center px-[24px]">
+          <div className="w-full sm:w-[491px] h-[54px] bg-white/4 rounded-[8px] flex items-center px-6">
             <span className="text-[16px] text-[#959595] tracking-[0.03em] font-medium mr-2">
               Name:
             </span>
             <input
               type="text"
-              name="name" // Обязательно!
+              name="name"
               value={formData.name} // Привязка к стейту
               onChange={handleChange} // Слушатель изменений
               required
@@ -104,7 +104,7 @@ export default function UiContactMe() {
             />
           </div>
 
-          <div className="w-full sm:w-[491px] h-[54px] bg-white/4 rounded-[8px] flex items-center px-[24px]">
+          <div className="w-full sm:w-[491px] h-[54px] bg-white/4 rounded-[8px] flex items-center px-6">
             <span className="text-[16px] text-[#959595] tracking-[0.03em] font-medium mr-2">
               Email:
             </span>
@@ -156,7 +156,7 @@ export default function UiContactMe() {
             </div>
 
             {isOpen && (
-              <div className="absolute top-[60px] left-0 w-full bg-[#1A1A1A] text-[#FFFFFF] rounded-[8px] overflow-hidden z-10">
+              <div className="sm:absolute top-[60px] left-0 w-full bg-[#1A1A1A] text-[#FFFFFF] rounded-[8px] overflow-hidden z-10">
                 {['Web Design', 'UI / UX', 'Frontend Development'].map(
                   (item) => (
                     <div

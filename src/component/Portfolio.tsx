@@ -37,8 +37,8 @@ export default function UiPortfolio() {
                 className={`px-5 py-[10px] sm:px-10 sm:py-[14px] rounded-lg transition-all mx-2 mb-4
                   ${
                     tag === 'All'
-                      ? 'bg-gradient-to-r from-[#FD6F00] to-[#E46400] text-[#FFFFFF] font-bold hover:bg-[#ff8800] transition cursor-pointer'
-                      : 'bg-white/8 text-[#C6C6C6] text-[16px] font-bold cursor-pointer'
+                      ? 'bg-gradient-to-r from-[#FD6F00] to-[#E46400] text-[#FFFFFF] font-bold transition cursor-pointer'
+                      : 'bg-white/8 text-[#C6C6C6] text-[16px] font-bold cursor-pointer tracking-[0.03em]'
                   }`}
               >
                 {tag}
@@ -68,7 +68,7 @@ export default function UiPortfolio() {
                 <p className="text-[16px] text-[#c6c6c6] font-bold ">
                   {project.name}
                 </p>
-                <p className="text-[16px] text-[#959595] font-bold ">
+                <p className="text-[16px] text-[#959595] font-bold tracking-[0.03em]">
                   {project.categories}
                 </p>
               </div>

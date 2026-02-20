@@ -12,21 +12,21 @@ export default function UiHero() {
   //
   return (
     <div className="flex flex-col sm:flex sm:flex-row justify-between items-center gap-[150px]">
-      <div className="flex flex-col justify-start items-center sm:items-start gap-[80px] text-center sm:text-left">
+      <div className="flex flex-col justify-start items-center sm:items-start gap-20 text-center sm:text-left">
         <div className="flex flex-col justify-start items-start gap-[61px]">
           <div className="flex flex-col justify-start items-start gap-[17px]">
             {/*frame 1*/}
-            <div className="flex flex-col justify-start items-start gap-[24px]">
+            <div className="flex flex-col justify-start items-start gap-6">
               <div className="flex flex-col justify-start items-center gap-[10px] w-full text-center sm:items-start">
-                <p className="text-[16px] sm:text-[24px] text-[#707070] typewriter-1">
+                <p className="text-[16px] sm:text-[24px] text-[#707070] typewriter-1 tracking-[0.03em]">
                   Hi I am
                 </p>
-                <p className="text-[20px] sm:text-[28px] text-[#707070] font-bold typewriter-2">
+                <p className="text-[20px] sm:text-[28px] text-[#707070] font-bold typewriter-2 tracking-[0.03em]">
                   Akhmetov Imran
                 </p>
               </div>
 
-              <p className="bg-clip-text bg-gradient-to-r from-[#984300] via-[#FD6F00] to-[#CA5900] transition-colors text-[50px] sm:text-[70px] text-center font-bold text-transparent flex items-center ">
+              <p className="bg-clip-text bg-gradient-to-r from-[#984300] via-[#FD6F00] to-[#CA5900] transition-colors text-[50px] sm:text-[70px] text-center font-bold text-transparent flex items-center tracking-[0.03em]">
                 IT-Specialist
               </p>
             </div>
@@ -92,10 +92,10 @@ export default function UiHero() {
             </a>
           </div>
         </div>
-        <div className="flex justify-center items-center gap-[15px] rounded-[8px] bg-[#ffffff]/4 p-[24px] text-center text-[20px] font-bold text-[#FFFFFF]">
-          <div className="flex flex-col items-center justify-center pr-[20px] border-r border-[#959595]">
+        <div className="flex justify-center items-center gap-[15px] rounded-[8px] bg-[#ffffff]/4 p-6 text-center text-[20px] font-bold text-[#FFFFFF]">
+          <div className="flex flex-col items-center justify-center pr-5 border-r border-[#959595] tracking-[0.03em]">
             {/* число дней сверху */}
-            <div className="flex-1 text-[20px] sm:text-[24px] font-bold text-[#FD6F00]">
+            <div className="flex-1 text-[20px] sm:text-[24px] font-bold text-[#FD6F00] tracking-[0.03em]">
               {diffDays} day
             </div>
             {/* название снизу */}
@@ -103,7 +103,7 @@ export default function UiHero() {
               Experiences
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center pl-[10px] pr-[28px] border-r border-[#959595]">
+          <div className="flex flex-col items-center justify-center pl-[10px] pr-6 border-r border-[#959595] tracking-[0.03em]">
             <p className="flex-1 text-[20px] sm:text-[24px] font-bold">
               Novice
             </p>
@@ -111,7 +111,7 @@ export default function UiHero() {
               specialist
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center pl-[10px]">
+          <div className="flex flex-col items-center justify-center pl-[10px] tracking-[0.03em]">
             <div className="flex-1 text-[20px] sm:text-[24px] font-bold text-[#FD6F00]">
               1
             </div>
