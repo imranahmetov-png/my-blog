@@ -39,7 +39,7 @@ export default function UIHeader() {
           Contact me
         </a>
         <button
-          onClick={() => switchTheme(theme === 'dark' ? 'dark' : 'light')}
+          onClick={() => switchTheme(theme === 'light' ? 'dark' : 'light')}
           type="button"
           className="px-4 py-2 rounded-lg cursor-pointer bg-gray-200 text-gray-700 font-semibold hover:bg-gray-300 transition-colors"
         >
