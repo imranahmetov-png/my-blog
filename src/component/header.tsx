@@ -56,7 +56,7 @@ export default function UIHeader() {
           href="https://discord.gg/2h8kgfT5"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-gradient-to-r from-[#FD6F00] to-[#E46400] linear-gradient text-white px-5 py-2 rounded-lg font-bold whitespace-nowrap transition"
+          className="bg-linear-to-r from-[#FD6F00] to-[#E46400] linear-gradient text-white px-5 py-2 rounded-lg font-bold whitespace-nowrap transition"
         >
           Hire Me
         </a>

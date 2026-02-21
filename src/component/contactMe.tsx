@@ -78,18 +78,18 @@ export default function UiContactMe() {
           onChange={handleChange}
           className="hidden"
         />
-        <div className="text-[#FEFEFE] text-[24px] sm:text-[40px] tracking-[0.03em] font-bold whitespace-nowrap flex items-center justify-center">
+        <p className="text-[#FEFEFE] text-[24px] sm:text-[40px] tracking-[0.03em] font-bold whitespace-nowrap flex items-center justify-center">
           Contact Me
-        </div>
+        </p>
         <p className="text-[16px] sm:text-[18px] text-[#707070] tracking-[0.03em] font-medium flex items-center justify-center text-center px-4 max-w-95,5 mx-auto">
           Cultivating Connections: Reach Out and Connect with Me
         </p>
       </div>
 
-      <div className="flex flex-col gap-6 sm:flex-wrap sm:gap-7,5">
+      <div className="flex flex-col gap-6 sm:flex-wrap">
         {/* Name and Email fields */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-[30px] w-full">
-          <div className="w-full sm:w-[491px] h-[54px] bg-white/4 rounded-[8px] flex items-center px-6">
+          <div className="w-full sm:w-[491px] h-[54px] bg-white/4 rounded-lg flex items-center px-6">
             <span className="text-[16px] text-[#959595] tracking-[0.03em] font-medium mr-2">
               Name:
             </span>
@@ -104,7 +104,7 @@ export default function UiContactMe() {
             />
           </div>
 
-          <div className="w-full sm:w-[491px] h-[54px] bg-white/4 rounded-[8px] flex items-center px-6">
+          <div className="w-full sm:w-[491px] h-[54px] bg-white/4 rounded-lg flex items-center px-6">
             <span className="text-[16px] text-[#959595] tracking-[0.03em] font-medium mr-2">
               Email:
             </span>
@@ -122,7 +122,7 @@ export default function UiContactMe() {
 
         {/* Phone Number and Service of Interest fields */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-[30px] w-full">
-          <div className="w-full sm:w-[491px] h-[54px] bg-white/4 rounded-[8px] flex items-center whitespace-nowrap px-[24px]">
+          <div className="w-full sm:w-[491px] h-[54px] bg-white/4 rounded-lg flex items-center whitespace-nowrap px-6">
             <span className="text-[16px] text-[#959595] tracking-[0.03em] font-medium mr-2">
               Phone Number:
             </span>
@@ -137,7 +137,7 @@ export default function UiContactMe() {
           </div>
 
           <div className="relative w-full sm:w-[491px]">
-            <div className="w-full h-[54px] bg-white/4 rounded-[8px] flex items-center justify-between px-[24px]">
+            <div className="w-full h-[54px] bg-white/4 rounded-lg flex items-center justify-between px-6">
               <div className="flex items-center gap-2">
                 <span className="text-[16px] text-[#959595] tracking-[0.03em] font-medium">
                   Service of Interest:
@@ -156,7 +156,7 @@ export default function UiContactMe() {
             </div>
 
             {isOpen && (
-              <div className="sm:absolute top-[60px] left-0 w-full bg-[#1A1A1A] text-[#FFFFFF] rounded-[8px] overflow-hidden z-10">
+              <div className="sm:absolute top-[60px] left-0 w-full bg-[#1A1A1A] text-[#FFFFFF] rounded-lg overflow-hidden z-10">
                 {['Web Design', 'UI / UX', 'Frontend Development'].map(
                   (item) => (
                     <div
@@ -165,7 +165,7 @@ export default function UiContactMe() {
                         setFormData((prev) => ({ ...prev, service: item }))
                         setIsOpen(false)
                       }}
-                      className="px-[24px] py-[12px] cursor-pointer text-[#FFFFFF] hover:bg-white/5"
+                      className="px-6 py-3 cursor-pointer text-[#FFFFFF] hover:bg-white/5"
                     >
                       {item}
                     </div>
@@ -183,7 +183,7 @@ export default function UiContactMe() {
             value={formData.message}
             onChange={handleChange}
             placeholder="Project Details..."
-            className="w-[386px] h-[162px] sm:min-w-[491px] sm:min-h-[162px] bg-white/4 rounded-[8px] text-[16px] text-[#959595] tracking-[0.03em] font-medium px-[24px] py-[14px] resize-none"
+            className="w-[386px] h-[162px] sm:min-w-[491px] sm:min-h-[162px] bg-white/4 rounded-lg text-[16px] text-[#959595] tracking-[0.03em] font-medium px-6 py-[14px] resize-none"
           ></textarea>
         </div>
 
