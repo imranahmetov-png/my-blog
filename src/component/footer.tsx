@@ -7,8 +7,8 @@ import phone from '@/assets/img/phone.svg'
 
 export default function UiEnd() {
   return (
-    <div className="flex flex-col justify-center items-center gap-[30px] sm:gap-[50px] px-[80px]">
-      <p className="relative text-transparent bg-clip-text bg-gradient-to-r from-[#FD6F00] to-[#E60026] text-[30px] font-bold tracking-[0.03em] flex items-center pt-[40px]">
+    <footer className="flex flex-col justify-center items-center gap-[30px] sm:gap-[50px] px-20">
+      <p className="relative text-transparent bg-clip-text bg-gradient-to-r from-[#FD6F00] to-[#E60026] text-[30px] font-bold tracking-[0.03em] flex items-center pt-10">
         Imran
       </p>
       <nav className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full">
@@ -50,7 +50,7 @@ export default function UiEnd() {
         </div>
       </nav>
 
-      <div className="flex items-end gap-[20px]">
+      <div className="flex items-end gap-5">
         {/*Instagram*/}
         <a
           href="https://www.instagram.com/imra_n_96?igsh=Zmw0NjJxM3k4cHRo&utm_source=qr"
@@ -127,7 +127,7 @@ export default function UiEnd() {
           © Developed by programmer Akhmetov Imran
         </div>
       </div>
-    </div>
+    </footer>
   )
 }
 // break-words - позволяет переносить длинные слова на новую строку, чтобы избежать переполнения контейнера.
