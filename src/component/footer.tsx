@@ -124,7 +124,7 @@ export default function UiEnd() {
 
       <div className="w-full border-t border-[#FFFFFF]/35">
         <div className="text-[#FFFFFF]/35 text-[14px] sm:text-[16px] tracking-[0.03em] font-bold px-4 py-4 text-center max-w-full sm:max-w-[600px] mx-auto break-words">
-          © Developed by programmer Akhmetov Imran
+          © 2026 Akhmetov Imran. Software Engineer.
         </div>
       </div>
     </footer>
