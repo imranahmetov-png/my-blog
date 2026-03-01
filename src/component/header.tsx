@@ -9,46 +9,46 @@ export default function UIHeader() {
       <div className="text-transparent mr-[10px] sm:mr-[50px] bg-clip-text bg-linear-to-r from-[#FD6F00] to-[#E60026] text-lg sm:text-[30px] text-align:left flex items-center pl-4 font-bold ">
         Imran
       </div>
-      <nav className="flex gap-2 sm:gap-6 justify-center items-center tracking-[0.03em]">
+      <nav className="flex justify-center items-end gap-2 sm:gap-6 tracking-[0.03em]">
         <a
           href="#Home"
-          className="text-[#FD6F00] transition text-sm sm:text-[20px] text-center flex items-center font-bold"
+          className="text-[#FD6F00] hover:text-[#ff8a33] transition-colors duration-300 text-sm sm:text-[23px] text-center flex items-center font-bold"
         >
           Home
         </a>
         <a
           href="#Services"
-          className="text-[#959595] transition text-sm sm:text-[20px] text-center flex items-center "
+          className="text-[#959595] hover:text-gray-300 transition-colors duration-300 text-sm sm:text-[23px] text-center flex items-center "
         >
           Services
         </a>
         <a
           href="#About me"
-          className="text-[#959595] transition text-sm sm:text-[20px] text-center whitespace-nowrap flex items-center"
+          className="text-[#959595] hover:text-gray-300 transition-colors duration-300 text-sm sm:text-[23px] text-center whitespace-nowrap flex items-center"
         >
           About me
         </a>
         <a
           href="#Portfolio"
-          className="text-[#959595] transition text-sm sm:text-[20px] text-centerflex items-center"
+          className="text-[#959595] hover:text-gray-300 transition-colors duration-300 text-sm sm:text-[23px] text-center "
         >
           Portfolio
         </a>
         <a
           href="#Contact me"
-          className="text-[#959595] transition text-sm sm:text-[20px] text-center whitespace-nowrap flex items-center"
+          className="text-[#959595] hover:text-gray-300 transition-colors duration-300 text-sm sm:text-[23px] text-center whitespace-nowrap flex items-center"
         >
           Contact me
         </a>
         <button
           onClick={() => switchTheme(theme === 'light' ? 'dark' : 'light')}
-          className="w-10 h-10 flex items-center justify-center cursor-pointer"
+          className="h-8 flex items-center justify-center cursor-pointer"
         >
           <img
             src={theme === 'light' ? ThemeD : ThemeL}
             alt={theme === 'light' ? 'Луна' : 'Солнце'}
-            className={`w-7 h-7 filter transition duration-300
-          ${theme === 'light' ? 'hover:brightness-200' : 'hover:brightness-165'}
+            className={`w-7 h-7 filter transition-transform duration-300
+          ${theme === 'light' ? 'hover:brightness-200' : 'hover:brightness-900'}
         `}
           />
         </button>
@@ -56,7 +56,7 @@ export default function UIHeader() {
           href="https://discord.gg/2h8kgfT5"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-linear-to-r from-[#FD6F00] to-[#E46400] linear-gradient text-white px-5 py-2 rounded-lg font-bold whitespace-nowrap transition"
+          className="bg-linear-to-r from-[#FD6F00] to-[#E46400] linear-gradient text-white px-5 py-2 rounded-lg font-bold whitespace-nowrap transition-transform duration-300 hover:scale-105"
         >
           Hire Me
         </a>
