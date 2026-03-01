@@ -76,20 +76,20 @@ export default function UiAboutMe() {
           </div>
           <div className="flex flex-col items-start">
             <div className="max-w-[354px] sm:min-w-[631px] sm:min-h-[456px] text-[16px] sm:text-[20px] text-[#959595] font-normal leading-8 tracking-[0.03em]">
-              <p className="mb-4">
+              <p className="text-justify mb-4">
                 Hi! My name is Imran, I am 17 years old, and I am a sophomore at
                 AUES College majoring in Information Systems Technology.
               </p>
-              <p className="mb-4">
+              <p className="text-justify mb-4">
                 I am interested in Frontend development and actively studying
                 JavaScript, creating my first projects and continually expanding
                 my knowledge of web technologies.
               </p>
-              <p className="mb-4">
+              <p className="text-justify mb-4">
                 Outside of school, I practice swimming, study English, and enjoy
                 spending time playing computer games.
               </p>
-              <p className="mb-4">
+              <p className="text-justify mb-4">
                 I am a young developer with a strong desire to grow, experiment,
                 and turn my ideas into functional interfaces.
               </p>
