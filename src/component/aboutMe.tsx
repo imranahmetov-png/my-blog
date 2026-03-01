@@ -52,7 +52,7 @@ export default function UiAboutMe() {
   const circumference = 2 * Math.PI * radius
   return (
     <div className="flex flex-col justify-start items-center">
-      <div className="w-[188px] h-[98px] flex flex-col">
+      <div className="h-[98px] flex flex-col">
         <div className="h-[48px] flex items-center justify-center">
           <p className="text-[#FEFEFE] text-[40px] font-bold leading-none whitespace-nowrap tracking-[0.03em]">
             About Me
@@ -67,7 +67,7 @@ export default function UiAboutMe() {
       </div>
       <div className="flex flex-col justify-between items-center gap-25">
         <div className="flex flex-col sm:flex sm:flex-row justify-between items-center gap-25">
-          <div className="max-w-[365.64px] max-h-[564.88px] sm:min-w-[523px] sm:min-h-[676px] bg-[#FFFFFF]/4 flex flex-col justify-between items-center rounded-t-[261.5px] rounded-b-xl p-[32px] ">
+          <div className="max-w-[354px] max-h-[564.88px] sm:min-w-[523px] sm:min-h-[676px] bg-[#FFFFFF]/4 flex flex-col justify-between items-center rounded-t-[261.5px] rounded-b-xl p-8">
             <img
               src={avatar}
               alt="avatar"
@@ -75,7 +75,7 @@ export default function UiAboutMe() {
             />
           </div>
           <div className="flex flex-col items-start">
-            <div className="max-w-[365.64px] sm:min-w-[631px] sm:min-h-[456px] text-[16px] sm:text-[20px] text-[#959595] font-normal leading-8 tracking-[0.03em]">
+            <div className="max-w-[354px] sm:min-w-[631px] sm:min-h-[456px] text-[16px] sm:text-[20px] text-[#959595] font-normal leading-8 tracking-[0.03em]">
               <p className="mb-4">
                 Hi! My name is Imran, I am 17 years old, and I am a sophomore at
                 AUES College majoring in Information Systems Technology.
