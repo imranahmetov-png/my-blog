@@ -86,7 +86,7 @@ export default function UiHero() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="bg-gradient-to-r from-[#FD6F00] to-[#E46400] linear-gradient tracking-[0.03em] font-bold cursor-pointer hover:opacity-80 transition min-w-[156px] min-h-[48px] text-[20px] text-[#FFFFFF] text-center py-2 rounded-lg">
+              <div className="bg-gradient-to-r from-[#FD6F00] to-[#E46400] linear-gradient tracking-[0.03em] font-bold cursor-pointer transition-transform duration-300 hover:scale-105 min-w-[156px] min-h-[48px] text-[20px] text-[#FFFFFF] text-center py-2 rounded-lg">
                 Hire me
               </div>
             </a>

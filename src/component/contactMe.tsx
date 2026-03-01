@@ -192,7 +192,7 @@ export default function UiContactMe() {
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="w-[85px] h-[35px] sm:w-[127px] sm:h-[48px] text-[#959595] text-center text-[16px] sm:text-[18px] font-bold tracking-[0.03em] border-2 border-[#959595] rounded-lg transition flex items-center justify-center cursor-pointer"
+            className="w-[85px] h-[35px] sm:w-[127px] sm:h-[48px] transition-transform duration-300 hover:scale-105 text-[#959595] text-center text-[16px] sm:text-[18px] font-bold tracking-[0.03em] border-2 border-[#959595] rounded-lg flex items-center justify-center cursor-pointer"
           >
             Send
           </button>

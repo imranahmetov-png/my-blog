@@ -47,7 +47,7 @@ export default function UIHeader() {
           <img
             src={theme === 'light' ? ThemeD : ThemeL}
             alt={theme === 'light' ? 'Луна' : 'Солнце'}
-            className={`w-7 h-7 filter transition-transform duration-300
+            className={`w-7 h-7 filter transition-transform duration-300 hover:scale-105
           ${theme === 'light' ? 'hover:brightness-200' : 'hover:brightness-900'}
         `}
           />

@@ -37,8 +37,8 @@ export default function UiPortfolio() {
                 className={`px-5 py-[10px] sm:px-10 sm:py-[14px] rounded-lg transition-all mx-2 mb-4
                   ${
                     tag === 'All'
-                      ? 'bg-gradient-to-r from-[#FD6F00] to-[#E46400] text-[#FFFFFF] font-bold transition cursor-pointer'
-                      : 'bg-white/8 text-[#C6C6C6] text-[16px] font-bold cursor-pointer tracking-[0.03em]'
+                      ? 'bg-gradient-to-r from-[#FD6F00] to-[#E46400] transition-transform duration-300 hover:scale-105 text-[#FFFFFF] font-bold cursor-pointer'
+                      : 'bg-white/8 text-[#C6C6C6] transition-transform duration-300 hover:scale-105 text-[16px] font-bold cursor-pointer tracking-[0.03em]'
                   }`}
               >
                 {tag}
@@ -50,7 +50,7 @@ export default function UiPortfolio() {
 
       {/* Галерея проектов */}
       <div className="w-full flex justify-center items-center">
-        <div className="max-w-[1445px] flex gap-6 flex-wrap justify-center items-center">
+        <div className="max-w-[1445px] flex gap-6 flex-wrap justify-center items-center transition-transform duration-300 hover:scale-105">
           {/* Карточка 1 */}
           {filteredProjects.map((project) => (
             <a
