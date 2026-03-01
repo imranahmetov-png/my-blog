@@ -1,41 +1,47 @@
-import servisephoto from '../assets/img/servisephoto.svg'
+import Web from '../assets/img/Web-Development.svg'
+import ReactInterfaces from '../assets/img/React-Interfaces.svg'
+import CodeFixing from '../assets/img/Code-Fixing.svg'
+import GameDevelopment from '../assets/img/Game-Development.svg'
+import LogicAlgorithms from '../assets/img/Logic&Algorithms.svg'
+import StudentProjects from '../assets/img/Student Projects.svg'
+
 function UiService() {
   const service = [
     {
       title: 'Web Development',
       description:
         'I build simple and responsive websites using HTML, CSS, and Tailwind.',
-      img: servisephoto,
+      img: Web,
     },
     {
       title: 'React Interfaces',
       description:
         'I develop clean UI components and simple interactive interfaces with React.',
-      img: servisephoto,
+      img: ReactInterfaces,
     },
     {
       title: 'Code Fixing',
       description:
         'I fix bugs, improve code structure, and help with small projects.',
-      img: servisephoto,
+      img: CodeFixing,
     },
     {
       title: 'Game Development',
       description:
         'I create simple 2D games with basic mechanics, logic, and levels. Experience with a game like Fire and Water.',
-      img: servisephoto,
+      img: GameDevelopment,
     },
     {
       title: 'Logic & Algorithms',
       description:
         'I implement timers, progress bars, counters, and basic game logic.',
-      img: servisephoto,
+      img: LogicAlgorithms,
     },
     {
       title: 'Student Projects',
       description:
         'I help with educational and college projects, including games and websites.',
-      img: servisephoto,
+      img: StudentProjects,
     },
   ]
 
