@@ -93,7 +93,7 @@ export default function UiHero() {
           </div>
         </div>
         <div className="flex justify-center items-start gap-[15px] rounded-[8px] bg-[#ffffff]/4 py-5 px-3 sm:p-6 text-center text-[20px] font-bold text-[#FFFFFF]">
-          <div className="flex flex-col justify-center items-start pr-5 border-r border-[#959595] tracking-[0.03em]">
+          <div className="flex flex-col justify-center items-start pr-4 sm:pr-5 border-r border-[#959595] tracking-[0.03em]">
             {/* число дней сверху */}
             <div className="text-[20px] sm:text-[24px] font-bold text-[#FD6F00] tracking-[0.03em]">
               {diffDays} day
