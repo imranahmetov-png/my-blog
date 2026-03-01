@@ -67,7 +67,7 @@ export default function UiAboutMe() {
       </div>
       <div className="flex flex-col justify-between items-center gap-25">
         <div className="flex flex-col sm:flex sm:flex-row justify-between items-center gap-25">
-          <div className="max-w-[365.64px] max-h-[564.88px] sm:min-w-[523px] sm:min-h-[676px] bg-[#FFFFFF]/4 flex flex-col justify-between items-center rounded-t-[261.5px] rounded-b-[12px] p-[32px] ">
+          <div className="max-w-[365.64px] max-h-[564.88px] sm:min-w-[523px] sm:min-h-[676px] bg-[#FFFFFF]/4 flex flex-col justify-between items-center rounded-t-[261.5px] rounded-b-xl p-[32px] ">
             <img
               src={avatar}
               alt="avatar"
@@ -146,7 +146,7 @@ export default function UiAboutMe() {
                   className="max-w-[40px] max-h-[40px] sm:min-w-[60px] sm:min-h-[60px] absolute z-20 rounded-full object-cover"
                 />
               </div>
-              <div className="w-[77px] h-[73px] flex flex-col items-center gap-[8px]">
+              <div className="w-[77px] h-[73px] flex flex-col items-center gap-2">
                 <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD6F00] to-[#E46400] text-[24px] sm:text-[30px] font-bold">
                   {s.percentText}
                 </div>
