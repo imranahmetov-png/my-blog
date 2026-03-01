@@ -92,18 +92,18 @@ export default function UiHero() {
             </a>
           </div>
         </div>
-        <div className="flex justify-center items-start gap-[15px] rounded-[8px] bg-[#ffffff]/4 p-6 text-center text-[20px] font-bold text-[#FFFFFF]">
+        <div className="flex justify-center items-start gap-[15px] rounded-[8px] bg-[#ffffff]/4 py-5 px-3 sm:p-6 text-center text-[20px] font-bold text-[#FFFFFF]">
           <div className="flex flex-col justify-center items-start pr-5 border-r border-[#959595] tracking-[0.03em]">
             {/* число дней сверху */}
             <div className="text-[20px] sm:text-[24px] font-bold text-[#FD6F00] tracking-[0.03em]">
               {diffDays} day
             </div>
             {/* название снизу */}
-            <div className="text-[16px] sm:text-[20px] font-bold ">
+            <div className="text-[16px] sm:text-[20px] font-bold">
               Experiences
             </div>
           </div>
-          <div className="flex flex-col justify-center items-start pr-4 border-r border-[#959595] tracking-[0.03em]">
+          <div className="flex flex-col justify-center items-start pr-4 sm:pl-2 sm:pr-5 border-r border-[#959595] tracking-[0.03em]">
             <p className="text-[20px] sm:text-[24px] font-bold">Novice</p>
             <p className="text-[16px] sm:text-[20px] font-bold">specialist</p>
           </div>
