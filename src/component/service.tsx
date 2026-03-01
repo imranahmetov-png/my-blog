@@ -55,9 +55,9 @@ function UiService() {
         {service.map((s, i) => (
           <div
             key={i}
-            className="bg-[#FFFFFF]/4 w-full max-w-[183px] sm:min-w-[420px] sm:min-h-[340px] text-[#575757] flex flex-col rounded-xl py-[34px] px-[34px] gap-[16px] tracking-[0.03em]"
+            className="bg-[#FFFFFF]/4 w-full max-w-[183px] sm:min-w-[420px] sm:min-h-[340px] text-[#575757] flex flex-col rounded-xl py-[34px] px-[34px] gap-4 tracking-[0.03em]"
           >
-            <div className="flex flex-col justify-center items-center gap-[16px]">
+            <div className="flex flex-col justify-center items-center gap-4">
               <img
                 src={s.img}
                 alt={s.title}

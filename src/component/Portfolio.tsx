@@ -54,7 +54,7 @@ export default function UiPortfolio() {
           {/* Карточка 1 */}
           {filteredProjects.map((project) => (
             <a
-              className="max-w-[284px] max-h-[284px] sm:min-w-[415px] sm:min-h-[473px] rounded-[16px] overflow-hidden"
+              className="max-w-[284px] sm:min-w-[415px] rounded-2xl overflow-hidden"
               href={project.img}
               target="_blank"
               rel="noopener noreferrer"
@@ -62,10 +62,10 @@ export default function UiPortfolio() {
               <img
                 src={project.img}
                 alt="photoEX1"
-                className="max-w-[284px] max-h-[284px] sm:min-w-[415px] sm:min-h-[473px] object-cover "
+                className="max-w-[284px] max-h-[284px] sm:min-w-[415px] sm:min-h-[473px] object-cover"
               />
-              <div className="h-[58px] px-4 bg-white/8 rounded-b-[20px] overflow-hidden flex flex-row justify-between items-center">
-                <p className="text-[16px] text-[#c6c6c6] font-bold ">
+              <div className="px-4 h-[54px] bg-white/8 rounded-b-[20px] flex justify-between items-center">
+                <p className="text-[16px] text-[#c6c6c6] font-bold">
                   {project.name}
                 </p>
                 <p className="text-[16px] text-[#959595] font-bold tracking-[0.03em]">
