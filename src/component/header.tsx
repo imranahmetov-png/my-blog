@@ -106,3 +106,4 @@ export default function UIHeader() {
     </header>
   )
 }
+//Логотип «Imran» теперь центрируется за счет flex-1 и text-center, а бургер-меню имеет order-1
