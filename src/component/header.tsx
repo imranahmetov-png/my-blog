@@ -1,55 +1,88 @@
+import { useRef, useState } from 'react'
 import { useTheme } from '@/context/theme/useTheme'
+import { useClickOutsite } from '../hooks/useClickOutsite'
 import ThemeD from '../assets/img/themeDark.svg'
 import ThemeL from '../assets/img/themeLight.svg'
+import MenuImg from '../assets/img/MenuImg.svg'
 
 export default function UIHeader() {
   const { theme, switchTheme } = useTheme()
+  const [isOpen, setIsOpen] = useState(false)
+  const handleLinkClick = () => {
+    setIsOpen(false) // закроет меню
+  }
+  const menuRef = useRef<HTMLElement>(null)
+  const buttonRef = useRef<HTMLButtonElement>(null) // Реф для кнопки
+  // Закрывание меню при клике вне него
+  useClickOutsite([menuRef, buttonRef], () => setIsOpen(false))
   return (
-    <header className="flex w-full justify-center text-align:center items-center sm:px-8 sm:py-4">
-      <div className="text-transparent mr-[10px] sm:mr-[50px] bg-clip-text bg-linear-to-r from-[#FD6F00] to-[#E60026] text-lg sm:text-[30px] text-align:left flex items-center pl-4 font-bold ">
+    <header className="relative container mx-auto w-full flex justify-between sm:justifu-center items-center sm:px-8 sm:py-4">
+      <p className="flex-1 text-center text-transparent sm:mr-[50px] bg-clip-text bg-linear-to-r from-[#FD6F00] to-[#E60026] text-lg sm:text-[30px] font-bold ">
         Imran
-      </div>
-      <nav className="flex justify-center items-end gap-2 sm:gap-6 tracking-[0.03em]">
-        <a
-          href="#Home"
-          className="text-[#FD6F00] hover:text-[#ff8a33] transition-colors duration-300 text-sm sm:text-[23px] text-center flex items-center font-bold"
+      </p>
+      <div className="flex items-center gap-3">
+        <button
+          ref={buttonRef}
+          className="sm:hidden flex items-center text-[20px] "
+          onClick={() => setIsOpen((prev) => !prev)}
         >
-          Home
-        </a>
-        <a
-          href="#Services"
-          className="text-[#959595] hover:text-gray-300 transition-colors duration-300 text-sm sm:text-[23px] text-center flex items-center "
+          <img src={MenuImg} alt="MenuImg" />
+        </button>
+        <nav
+          ref={menuRef}
+          className={`
+    fixed top-[115px] left-0 w-full bg-[#ffffff]/6 transform transition-transform duration-300 ease-in-out
+    ${isOpen ? 'translate-x-0' : '-translate-x-full'}
+    flex flex-col rounded-xl p-6  overflow-hidden sm:static sm:flex sm:flex-row sm:translate-x-0 sm:h-auto sm:w-auto sm:bg-transparent
+  `}
         >
-          Services
-        </a>
-        <a
-          href="#About me"
-          className="text-[#959595] hover:text-gray-300 transition-colors duration-300 text-sm sm:text-[23px] text-center whitespace-nowrap flex items-center"
-        >
-          About me
-        </a>
-        <a
-          href="#Portfolio"
-          className="text-[#959595] hover:text-gray-300 transition-colors duration-300 text-sm sm:text-[23px] text-center "
-        >
-          Portfolio
-        </a>
-        <a
-          href="#Contact me"
-          className="text-[#959595] hover:text-gray-300 transition-colors duration-300 text-sm sm:text-[23px] text-center whitespace-nowrap flex items-center"
-        >
-          Contact me
-        </a>
+          <div className="flex flex-col gap-3 px-2 sm:flex-row ">
+            <a
+              href="#Home"
+              onClick={handleLinkClick}
+              className="text-[#FD6F00] hover:text-[#ff8a33] font-bold text-lg sm:text-[23px]"
+            >
+              Home
+            </a>
+            <a
+              href="#Services"
+              onClick={handleLinkClick}
+              className="text-[#959595] hover:text-gray-300 text-lg sm:text-[23px]"
+            >
+              Services
+            </a>
+            <a
+              href="#About me"
+              onClick={handleLinkClick}
+              className="text-[#959595] hover:text-gray-300 text-lg sm:text-[23px] whitespace-nowrap"
+            >
+              About me
+            </a>
+            <a
+              href="#Portfolio"
+              onClick={handleLinkClick}
+              className="text-[#959595] hover:text-gray-300 text-lg sm:text-[23px]"
+            >
+              Portfolio
+            </a>
+            <a
+              href="#Contact me"
+              onClick={handleLinkClick}
+              className="text-[#959595] hover:text-gray-300 text-lg sm:text-[23px] whitespace-nowrap"
+            >
+              Contact me
+            </a>
+          </div>
+        </nav>
         <button
           onClick={() => switchTheme(theme === 'light' ? 'dark' : 'light')}
-          className="h-8 flex items-center justify-center cursor-pointer"
+          className="h-8 flex items-center justify-center p-2 rounded-lg hover:scale-105 transition-transform duration-300
+        ${theme === 'light' ? 'hover:brightness-200' : 'hover:brightness-900'}"
         >
           <img
             src={theme === 'light' ? ThemeD : ThemeL}
             alt={theme === 'light' ? 'Луна' : 'Солнце'}
-            className={`w-7 h-7 filter transition-transform duration-300 hover:scale-105
-          ${theme === 'light' ? 'hover:brightness-200' : 'hover:brightness-900'}
-        `}
+            className="w-6 h-6"
           />
         </button>
         <a
@@ -60,7 +93,7 @@ export default function UIHeader() {
         >
           Hire Me
         </a>
-      </nav>
+      </div>
     </header>
   )
 }

@@ -69,26 +69,13 @@ html {
   animation-delay: 1.5s; /* ждём пока первый текст закончится */
 }
 
-/*убрал (solid #fd6f00) делает бордер-райт (не нравится) работает с (blink-caret 0.75s step-end infinite,) и  @keyframes blink-caret {
-    from,
-    to {
-      border-color: transparent;
-    }
-    50% {
-      border-color: #fd6f00;
-    }
-  }
-  /*
-  typing 0s,
-  blink 0.7s; /* скрытие курсора */
-
-html[data-theme='dark'] {
+[data-theme='dark'] {
   background: #111;
   color: white;
   background-image: url('/assets/img/klyaksa.svg');
 }
 
-html[data-theme='light'] {
+[data-theme='light'] {
   background: white;
   color: black;
 }
