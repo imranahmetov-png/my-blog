@@ -16,7 +16,7 @@ export default function UIHeader() {
   // Закрывание меню при клике вне него
   useClickOutsite([menuRef, buttonRef], () => setIsOpen(false))
   return (
-    <header className="relative container mx-auto w-full max-w-5xl flex justify-between sm:justifu-center items-center sm:px-8 sm:py-4">
+    <header className="relative container mx-auto w-full max-w-5xl flex justify-between sm:justifu-center items-center sm:px-8">
       {/* 1. ЛОГОТИП (На мобилках по центру, на ПК слева) */}
       <div className="flex-1 sm:flex-none text-center sm:text-left order-2 sm:order-1">
         <p className="inline-block text-transparent bg-clip-text bg-linear-to-r from-[#FD6F00] to-[#E60026] text-lg sm:text-[30px] font-bold">
@@ -85,8 +85,7 @@ export default function UIHeader() {
       <div className="flex items-center gap-2 sm:gap-4 order-3">
         <button
           onClick={() => switchTheme(theme === 'light' ? 'dark' : 'light')}
-          className="h-8 flex items-center justify-center p-2 rounded-lg hover:scale-105 transition-transform duration-300
-        ${theme === 'light' ? 'hover:brightness-200' : 'hover:brightness-900'}"
+          className="h-8 flex items-center justify-center p-2 rounded-lg hover:scale-105 transition-transform duration-300"
         >
           <img
             src={theme === 'light' ? ThemeD : ThemeL}
