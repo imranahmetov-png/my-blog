@@ -1,11 +1,15 @@
 import { useRef, useState } from 'react'
 import { useTheme } from '@/context/theme/useTheme'
-import { useClickOutsite } from '../hooks/useClickOutsite'
-import ThemeD from '../assets/img/themeDark.svg'
-import ThemeL from '../assets/img/themeLight.svg'
-import MenuImg from '../assets/img/MenuImg.svg'
+import { useClickOutsite } from '@/hooks/useClickOutsite'
+import ThemeD from '@/assets/img/themeDark.svg'
+import ThemeL from '@/assets/img/themeLight.svg'
+import MenuImg from '@/assets/img/MenuImg.svg'
 
 export default function UIHeader() {
+  const copyDiscord = () => {
+    navigator.clipboard.writeText('shifu_08')
+    alert('Username copied! Add me on Discord: shifu_08')
+  }
   const { theme, switchTheme } = useTheme()
   const [isOpen, setIsOpen] = useState(false)
   const handleLinkClick = () => {
@@ -39,7 +43,7 @@ export default function UIHeader() {
         className={`
         fixed top-[115px] left-0 w-full bg-[#ffffff]/6 transform transition-transform duration-300 ease-in-out
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-        flex flex-col rounded-xl p-6  overflow-hidden sm:static sm:flex sm:flex-row sm:translate-x-0 sm:h-auto sm:w-auto sm:bg-transparent
+        flex flex-col rounded-xl p-6 overflow-hidden sm:static sm:flex sm:flex-row sm:translate-x-0 sm:h-auto sm:w-auto sm:bg-transparent
         sm:order-2 sm:flex-1 sm:justify-center `} // Эти классы центрируют меню на ПК
       >
         <div className="flex flex-col gap-3 sm:gap-10 px-2 sm:flex-row ">
@@ -94,9 +98,7 @@ export default function UIHeader() {
           />
         </button>
         <a
-          href="https://discord.gg/2h8kgfT5"
-          target="_blank"
-          rel="noopener noreferrer"
+          onClick={copyDiscord}
           className="bg-linear-to-r from-[#FD6F00] to-[#E46400] linear-gradient text-white px-5 py-2 rounded-lg font-bold whitespace-nowrap transition-transform duration-300 hover:scale-105"
         >
           Hire Me

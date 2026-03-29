@@ -53,7 +53,7 @@ export default function UiEnd() {
       <div className="flex items-end gap-5">
         {/*Instagram*/}
         <a
-          href="https://www.instagram.com/imra_n_96?igsh=Zmw0NjJxM3k4cHRo&utm_source=qr"
+          href="https://www.instagram.com/imra_n_08/"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -69,7 +69,7 @@ html {
   animation-delay: 1.5s; /* ждём пока первый текст закончится */
 }
 
-[data-theme='dark'] {
+:root {
   background: #111;
   color: white;
   background-image: url('/assets/img/klyaksa.svg');
@@ -78,4 +78,5 @@ html {
 [data-theme='light'] {
   background: white;
   color: black;
+  background-image: none; /* убираем кляксу */
 }

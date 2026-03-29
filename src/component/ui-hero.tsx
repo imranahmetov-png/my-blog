@@ -5,6 +5,10 @@ import github from '@/assets/img/github.svg'
 import WhatsApp from '@/assets/img/WhatsApp.svg'
 
 export default function UiHero() {
+  const copyDiscord = () => {
+    navigator.clipboard.writeText('shifu_08')
+    alert('Username copied! Add me on Discord: shifu_08')
+  }
   const startDate = new Date('2025-09-17') // дата начала опыта
   const today = new Date() // текущая дата
   const diffTime = today.getTime() - startDate.getTime() // разница в миллисекундах
@@ -34,7 +38,7 @@ export default function UiHero() {
             <div className="flex justify-center sm:justify-start items-end gap-[20px] w-full">
               {/*Instagram*/}
               <a
-                href="https://www.instagram.com/imra_n_96?igsh=Zmw0NjJxM3k4cHRo&utm_source=qr"
+                href="https://www.instagram.com/imra_n_08/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -81,11 +85,7 @@ export default function UiHero() {
             </div>
           </div>
           <div className="flex items-center gap-4 w-full justify-center sm:justify-start">
-            <a
-              href="https://discord.gg/2h8kgfT5"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a onClick={copyDiscord}>
               <div className="bg-gradient-to-r from-[#FD6F00] to-[#E46400] linear-gradient tracking-[0.03em] font-bold cursor-pointer transition-transform duration-300 hover:scale-105 min-w-[156px] min-h-[48px] text-[20px] text-[#FFFFFF] text-center py-2 rounded-lg">
                 Hire me
               </div>
